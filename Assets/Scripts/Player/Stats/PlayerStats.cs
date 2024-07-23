@@ -18,4 +18,7 @@ public class PlayerStats
    
    public float money;
    
+   // Mini Game related attributes
+   public IdleGameStats idleGameStats = new IdleGameStats();
+   public WorkGameStats workGameStats = new WorkGameStats();
 }
