@@ -17,6 +17,16 @@ namespace Player.Stats
         {
             _playerStats.stressPerSecond += delta;
         }
+
+        public static void ReduceExhaustionPerSecond(float delta)
+        {
+            _playerStats.exhaustionPerSecond -= delta;
+        }
+
+        public static void ReduceStressPerSecond(float delta)
+        {
+            _playerStats.stressPerSecond -= delta;
+        }
         
         public static void Update(float deltaTime)
         {
