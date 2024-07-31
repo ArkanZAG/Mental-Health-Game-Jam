@@ -7,6 +7,7 @@ namespace Player.Stats
         private static PlayerStats _playerStats = new PlayerStats();
         public static float Exhaustion => _playerStats.exhaustion;
         public static float Stress => _playerStats.stress;
+        public static float Money => _playerStats.money;
 
         public static void AddExhaustionPerSecond(float delta)
         {
@@ -16,6 +17,11 @@ namespace Player.Stats
         public static void AddStressPerSecond(float delta)
         {
             _playerStats.stressPerSecond += delta;
+        }
+
+        public static void AddMoney(float delta)
+        {
+            _playerStats.money += delta;
         }
         
         public static void Update(float deltaTime)

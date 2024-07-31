@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Rumah.unity
+    guid: 4e03eead0ef60d447bf14e1e525d5ce2
+  - enabled: 1
+    path: Assets/Scenes/TransportasiKereta.unity
+    guid: e250eebb0b2b1054a97728ea3341a4d5
+  - enabled: 1
+    path: Assets/Scenes/TransportasiBis.unity
+    guid: 654090d78d0d3914aa98546a294b9ca6
+  - enabled: 1
+    path: Assets/Scenes/TransportasiTaxi.unity
+    guid: f67ebd91e06bd7341bfa2c159b39db19
+  - enabled: 1
+    path: Assets/Scenes/SceneKantor.unity
+    guid: dbb3391afe0e97346943cda23b9a67c7
   m_configObjects: {}
