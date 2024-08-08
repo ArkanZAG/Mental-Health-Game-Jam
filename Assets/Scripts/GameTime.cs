@@ -16,10 +16,10 @@ public static class GameTime
     {
         realTime += deltaTime;
         
-        if (realTime >= 60)
+        if (realTime >= 1)
         {
             minutes += 1;
-            realTime -= 60;
+            realTime -= 1f;
             if (minutes >= 60)
             {
                 hours += 1;
@@ -27,7 +27,7 @@ public static class GameTime
             }
         }
     }
-
+    
 
     public static void AddHours(int timeAdded)
     {
