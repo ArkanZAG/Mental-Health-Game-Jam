@@ -9,6 +9,16 @@ namespace Player.Stats
         public static float Stress => _playerStats.stress;
         public static float Money => _playerStats.money;
 
+        public static void SetExhaustionPerSecond(float value)
+        {
+            _playerStats.exhaustionPerSecond = value;
+        }
+
+        public static void SetStressPerSecond(float value)
+        {
+            _playerStats.stressPerSecond = value;
+        }
+
         public static void AddExhaustionPerSecond(float delta)
         {
             _playerStats.exhaustionPerSecond += delta;
@@ -17,17 +27,6 @@ namespace Player.Stats
         public static void AddStressPerSecond(float delta)
         {
             _playerStats.stressPerSecond += delta;
-        }
-
-
-        public static void ReduceExhaustionPerSecond(float delta)
-        {
-            _playerStats.exhaustionPerSecond -= delta;
-        }
-
-        public static void ReduceStressPerSecond(float delta)
-        {
-            _playerStats.stressPerSecond -= delta; 
         }
 
         public static void AddMoney(float delta)

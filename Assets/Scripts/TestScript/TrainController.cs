@@ -5,10 +5,11 @@ using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerTransportationController : MonoBehaviour
+public class TrainController : MonoBehaviour
 {
     private int startHour;
     [SerializeField] private int hourDuration;
+    [SerializeField] private GameController gameController;
     private void Awake()
     {
         startHour = GameTime.Hours;
@@ -19,8 +20,7 @@ public class PlayerTransportationController : MonoBehaviour
     {
         if ((startHour + hourDuration) <= GameTime.Hours)
         {
-            SceneManager.LoadScene("SceneKantor");
-            Debug.Log(startHour + hourDuration);
+            gameController.SetGameSpeed(0f);
         }
     }
 }

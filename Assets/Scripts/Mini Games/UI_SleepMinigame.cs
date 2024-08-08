@@ -50,7 +50,7 @@ public class UI_SleepMinigame : MonoBehaviour
         // If sleep succeeds
         if (_moveRate <= 0.05f)
         {
-            PlayerStatsController.ReduceExhaustionPerSecond(timer);
+            PlayerStatsController.SetExhaustionPerSecond(-1f);
         }
     }
 
