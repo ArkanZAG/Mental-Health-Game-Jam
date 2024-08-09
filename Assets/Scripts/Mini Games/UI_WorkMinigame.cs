@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 delegate Color DelegateColor();
 public class UI_WorkMinigame : MonoBehaviour
 {
-    [SerializeField] private List<Color> tableColorList = new List<Color>();
+    [SerializeField] private GameObject cellParent;
+    [SerializeField] private GameObject cellPrefab;
+    private List<GameObject> cellImageList = new List<GameObject>(0);
 
+    private List<Color> tableColorList = new List<Color>();
     private List<string> colorList = new List<string>
     {
         "green",
@@ -35,26 +39,8 @@ public class UI_WorkMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        DelegateColor color = delegate
-        {
-            System.Random random = new System.Random();
-            var index = random.Next(0, colorList.Count-1);
-            var chosenColor = colorList[index];
-            colorCount[colorList[index]] += 1;
-            if (colorCount[colorList[index]] >= _maxColorAmount)
-            {
-                colorList.Remove(colorList[index]);
-            }
 
-            return assignColorWithString(chosenColor);
-        };
-
-        tableColorList = Enumerable
-            .Range(0, 36)
-            .Select(__ => color()).ToList<Color>();
-
-        print(tableColorList.Count);
+        SpawnRandomColorTable();
     }
 
     // Update is called once per frame
@@ -63,7 +49,36 @@ public class UI_WorkMinigame : MonoBehaviour
         
     }
 
-    private Color assignColorWithString(string color)
+    private void SpawnRandomColorTable()
+    {
+        // Generate random color
+        DelegateColor color = delegate
+        {
+            System.Random random = new System.Random();
+            var index = random.Next(0, colorList.Count);
+            var chosenColor = colorList[index];
+            colorCount[colorList[index]] += 1;
+            if (colorCount[colorList[index]] >= _maxColorAmount)
+            {
+                colorList.Remove(colorList[index]);
+            }
+
+            return AssignColorWithString(chosenColor);
+        };
+
+        tableColorList = Enumerable
+            .Range(0, 36)
+            .Select(__ => color()).ToList<Color>();
+
+        // Instantiate cell with color in table parent
+        for (int i = 0; i < tableColorList.Count; i++)
+        {
+            GameObject newCell = Instantiate(cellPrefab, cellParent.transform);
+            newCell.GetComponent<Image>().color = tableColorList[i];
+            cellImageList.Add(newCell);
+        }
+    }
+    private Color AssignColorWithString(string color)
     {
         switch (color)
         {
