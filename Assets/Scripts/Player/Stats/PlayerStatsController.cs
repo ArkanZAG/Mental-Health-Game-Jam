@@ -73,5 +73,21 @@ namespace Player.Stats
                 _playerStats.exhaustion += 0.2f * deltaTime;
             }
         }
+
+        // Minigame related player stats function
+        public static int GetWorkMinigameAmount()
+        {
+            return _playerStats.workGameStats.CompleteAmount;
+        }
+
+        public static void ResetWorkMinigameAmount()
+        {
+           _playerStats.workGameStats.Reset();
+        }
+
+        public static void IncrementWorkMinigameAmount()
+        {
+            _playerStats.workGameStats.Increment();
+        }
     }
 }
