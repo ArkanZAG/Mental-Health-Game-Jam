@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class UI_WorkMinigame : MonoBehaviour
     [SerializeField] private GameObject _cellParent;
     [SerializeField] private GameObject _cellHeadParent;
     [SerializeField] private GameObject _cellPrefab;
+    [SerializeField] private TextMeshProUGUI _completedWorkText;
     private List<GameObject> _cellList = new List<GameObject>(0);
     private List<GameObject> _cellHeadList = new List<GameObject>(0);
 
@@ -135,6 +137,7 @@ public class UI_WorkMinigame : MonoBehaviour
             }
         }
         PlayerStatsController.IncrementWorkMinigameAmount();
+        _completedWorkText.text = string.Format("Completed work: {0}", PlayerStatsController.GetWorkMinigameAmount());
         Debug.Log(PlayerStatsController.GetWorkMinigameAmount());
         ShuffleRandomColorTable();
     }
@@ -197,6 +200,8 @@ public class UI_WorkMinigame : MonoBehaviour
             _cellList[i].GetComponent<Image>().color = _tableColorList[i];
             Debug.Log("Swap-" + i);
         }
+        _cellList[^1].GetComponent<Image>().color = _tableColorList[^1];
+
     }
     private Color AssignColorFromInt(int color)
     {
