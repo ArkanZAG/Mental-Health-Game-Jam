@@ -19,6 +19,16 @@ namespace Player.Stats
             _playerStats.stressPerSecond = value;
         }
 
+        public static void AddExhaustion(float value)
+        {
+            _playerStats.exhaustion += value;
+        }
+
+        public static void AddStress(float value)
+        {
+            _playerStats.stress += value;
+        }
+
         public static void AddExhaustionPerSecond(float delta)
         {
             _playerStats.exhaustionPerSecond += delta;

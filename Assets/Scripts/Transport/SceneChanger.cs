@@ -7,7 +7,7 @@ namespace TestScript
 {
     public class SceneChanger : MonoBehaviour
     {
-        private void OnTriggerEnter(Collider other)
+        public void OnTriggerEnter(Collider other)
         {
             SceneManager.LoadScene("SceneKantor");
         }

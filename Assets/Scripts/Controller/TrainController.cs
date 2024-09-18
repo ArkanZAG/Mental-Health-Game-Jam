@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace TestScript
+namespace Controller
 {
-    public class BusController : MonoBehaviour
+    public class TrainController : MonoBehaviour
     {
         private int startHour;
         [SerializeField] private int hourDuration;
@@ -11,6 +10,7 @@ namespace TestScript
         private void Awake()
         {
             startHour = GameTime.Hours;
+        
         }
 
         private void Update()
