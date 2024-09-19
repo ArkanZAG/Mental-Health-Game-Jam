@@ -6,7 +6,7 @@ namespace RandomEvents
     {
         public virtual void DoEvent()
         {
-            
+            Debug.Log("Event Happening");
         }
     }
 }

@@ -8,12 +8,17 @@ public static class GameTime
     private static int minutes;
     private static int hours;
     private static float realTime;
+    private static int dayCount = 1;
+    private static bool isPaused = false;
 
     public static int Minutes => minutes;
     public static int Hours => hours;
+    public static int DayCount => dayCount;
 
     public static void Update(float deltaTime)
     {
+        if (isPaused) return;
+        
         realTime += deltaTime;
         
         if (realTime >= 1)
@@ -26,11 +31,22 @@ public static class GameTime
                 minutes -= 60;
             }
         }
+
+        if (hours == 24)
+        {
+            hours = 0;
+            dayCount += 1;
+        }
     }
     
 
     public static void AddHours(int timeAdded)
     {
         hours += timeAdded;
+    }
+
+    public static void PauseState(bool value)
+    {
+        isPaused = value;
     }
 }

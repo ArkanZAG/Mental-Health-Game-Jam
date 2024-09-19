@@ -14,7 +14,7 @@ namespace RandomEvents.Event
             if (GameTime.Hours != 4 || !(PlayerStatsController.Exhaustion >= 50)) return;
             if (randomValue >= eventChance)
             {
-                    
+                
             }
         }
 

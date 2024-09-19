@@ -1,3 +1,4 @@
+using RandomEvents;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,28 +8,22 @@ namespace Controller
     {
         private int startHour;
         [SerializeField] private int hourDuration;
-    
-    
+        [SerializeField] private RandomEventController randomEventController;
+        [SerializeField] private RandomEvent randomEvent;
+        
         private void Awake()
-        { 
-            float randomValue = Random.value;
-            startHour = GameTime.Hours;
-            if (randomValue < 0.15f)
-            {
-                SomethingHappen();
-            }
-        }
-
-        public void SomethingHappen()
         {
-            Debug.Log("Something Happen");
+            GameTime.PauseState(true);
+            startHour = GameTime.Hours;
+            
+            randomEventController.DoEvent(randomEvent);
         }
-
+        
         private void Update()
         {
             if ((startHour + hourDuration) <= GameTime.Hours)
             {
-                SceneManager.LoadScene("SceneKantor");
+                GameTime.PauseState(true);
             }
         }
     

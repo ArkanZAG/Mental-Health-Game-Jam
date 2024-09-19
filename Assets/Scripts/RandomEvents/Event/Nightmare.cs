@@ -11,7 +11,7 @@ namespace RandomEvents.Event
         private float chanceMax = 50f;
         private float GetNightmareChance()
         {
-            var chance = chanceBase + ((chanceMax - chanceBase) / 100) * PlayerStatsController.Exhaustion;
+            var chance = chanceBase + ((chanceMax - chanceBase) / 100) * PlayerStatsController.Stress;
             return chance;
         }
 
