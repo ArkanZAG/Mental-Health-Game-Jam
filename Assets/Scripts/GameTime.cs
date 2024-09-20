@@ -6,7 +6,7 @@ using UnityEngine;
 public static class GameTime
 {
     private static int minutes;
-    private static int hours = 8;
+    private static int hours = 4;
     private static float realTime;
     private static int dayCount = 1;
     private static bool isPaused = false;

@@ -52,6 +52,10 @@ namespace Player.Stats
 
         private static void HandleStress(float deltaTime)
         {
+            if (_playerStats.stress <= _playerStats.maximumStress)
+            {
+                _playerStats.stress += _playerStats.stressPerSecond * _playerStats.stressPerSecondModifier * deltaTime;
+            }
             if (_playerStats.stress >= 50)
             {
                 _playerStats.stressPerSecondModifier = 1.5f;
@@ -63,15 +67,14 @@ namespace Player.Stats
             {
                 _playerStats.stressPerSecondModifier = 1f;
             }
-            
-            _playerStats.stress += _playerStats.stressPerSecond * _playerStats.stressPerSecondModifier * deltaTime;
-            
         }
 
         private static void HandleExhaustion(float deltaTime)
         {
-            _playerStats.exhaustion += _playerStats.exhaustionPerSecond * deltaTime;
-            
+            if (_playerStats.exhaustion <= _playerStats.maximumExhaustion)
+            {
+                _playerStats.exhaustion += _playerStats.exhaustionPerSecond * deltaTime;
+            }
             if (_playerStats.stress >= 50)
             {
                 _playerStats.exhaustion += 0.05f * deltaTime;
