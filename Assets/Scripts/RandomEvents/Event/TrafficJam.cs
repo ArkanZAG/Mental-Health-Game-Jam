@@ -8,11 +8,13 @@ namespace RandomEvents.Event
         
         public override void DoEvent()
         {
+            Debug.Log("Traffijam");
             var randomValue = Random.Range(0f, 100f);
 
             if (GameTime.Hours != 7 && GameTime.Hours != 8) return;
-            if (randomValue > eventChance)
+            if (randomValue >= eventChance)
             {
+                Debug.Log("Traffic Jam Initiated");
                 GameTime.AddHours(1);
             }
         }
