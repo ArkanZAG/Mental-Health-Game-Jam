@@ -32,5 +32,6 @@ public class TaxiUI : MonoBehaviour
     {
         GameTime.PauseState(false);
         PlayerStatsController.SetExhaustionPerSecond(1);
+        holder.SetActive(false);
     }
 }
