@@ -10,7 +10,6 @@ namespace Controller
         private void Awake()
         {
             startHour = GameTime.Hours;
-        
         }
 
         private void Update()

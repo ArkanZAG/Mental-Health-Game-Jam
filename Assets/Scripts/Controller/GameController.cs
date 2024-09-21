@@ -12,8 +12,8 @@ namespace Controller
             GameTime.Update(Time.deltaTime * gameSpeed);
             PlayerStatsController.Update(Time.deltaTime * gameSpeed);
 
-            //Debug.Log("Jam : " + GameTime.Hours + ", Menit : " + GameTime.Minutes + ", Exhaustion : " +
-                      //PlayerStatsController.Exhaustion + ", Day : " + GameTime.DayCount);
+            Debug.Log("Jam : " + GameTime.Hours + ", Menit : " + GameTime.Minutes + ", Exhaustion : " +
+                      PlayerStatsController.Exhaustion + ", Day : " + GameTime.DayCount);
 
         }
         public void SetGameSpeed(float value)
