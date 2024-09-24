@@ -8,23 +8,22 @@ namespace Controller
     {
         private int startHour;
         [SerializeField] private int hourDuration;
-        [SerializeField] private RandomEventController randomEventController;
-        [SerializeField] private SceneController sceneController;
         [SerializeField] private RandomEvent randomEvent;
-        [SerializeField] private TaxiUI taxiUiController;
+        [SerializeField] private SceneController sceneController;
         
         private void Awake()
         {
             GameTime.PauseState(true);
             startHour = GameTime.Hours;
-            randomEventController.DoEvent(randomEvent);
+            randomEvent.DoEvent();
         }
         
         private void Update()
         {
-            if ((startHour + hourDuration) <= GameTime.Hours)
+            if ((startHour + hourDuration) > GameTime.Hours) return;
+            GameTime.PauseState(true);
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                GameTime.PauseState(true);
                 sceneController.ChangeScene("SceneKantor");
             }
         }

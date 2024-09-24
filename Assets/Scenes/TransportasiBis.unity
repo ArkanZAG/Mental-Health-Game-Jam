@@ -809,6 +809,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &588989916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588989918}
+  - component: {fileID: 588989917}
+  m_Layer: 0
+  m_Name: TrafficJam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &588989917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588989916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ee431d0f1b434d957fcd88d3e9fc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &588989918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588989916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.07337, y: 50, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &631885253
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158b4f88b2d07ae45969793c14b488bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 1
+  gameSpeed: 100
 --- !u!4 &651422608
 Transform:
   m_ObjectHideFlags: 0
@@ -1217,64 +1261,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1295904872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1295904873}
-  - component: {fileID: 1295904875}
-  - component: {fileID: 1295904874}
-  m_Layer: 0
-  m_Name: RandomEventController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1295904873
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295904872}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1442517336}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1295904874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295904872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ee431d0f1b434d957fcd88d3e9fc6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1295904875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295904872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 882b108ae8cd85c4ab68bcfe1e9a2f74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomEvent: {fileID: 1295904874}
 --- !u!1 &1442517335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,13 +1286,12 @@ Transform:
   m_GameObject: {fileID: 1442517335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.07337, y: 50, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 651422608}
   - {fileID: 2080414379}
-  - {fileID: 1295904873}
   - {fileID: 251418237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1490,8 +1475,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f96d8307f8457994d146c95a7f529d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hourDuration: 0
+  hourDuration: 4
   gameController: {fileID: 651422607}
+  sceneController: {fileID: 251418238}
+  randomEvent: {fileID: 588989917}
 --- !u!1 &2098926550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1523,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 546551393}
   - {fileID: 292874338}
+  - {fileID: 588989918}
   - {fileID: 1442517336}
   - {fileID: 375871145}
   - {fileID: 325365535}

@@ -21,19 +21,22 @@ public class HomeSceneUI : MonoBehaviour
     {
         taxiSceneButton.onClick.AddListener(ChangeSceneTaxi);
         trainSceneButton.onClick.AddListener(ChangeSceneTrain);
-        trainSceneButton.onClick.AddListener(ChangeSceneBus);
+        busSceneButton.onClick.AddListener(ChangeSceneBus);
     }
     private void ChangeSceneTaxi()
     {
+        PlayerStatsController.AddMoney(-150);
         sceneController.ChangeScene("TransportasiTaxi");
     }
     private void ChangeSceneTrain()
     {
+        PlayerStatsController.AddMoney(-100);
         sceneController.ChangeScene("TransportasiKereta");
     }
     private void ChangeSceneBus()
     {
-        sceneController.ChangeScene("TrasportasiBis");
+        PlayerStatsController.AddMoney(-50);
+        sceneController.ChangeScene("TransportasiBis");
     }
     
     private void Update()

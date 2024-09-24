@@ -14,7 +14,6 @@ namespace Controller
 
             Debug.Log("Jam : " + GameTime.Hours + ", Menit : " + GameTime.Minutes + ", Exhaustion : " +
                       PlayerStatsController.Exhaustion + ", Day : " + GameTime.DayCount);
-
         }
         public void SetGameSpeed(float value)
         {

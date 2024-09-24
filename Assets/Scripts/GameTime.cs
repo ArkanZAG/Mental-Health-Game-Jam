@@ -32,11 +32,9 @@ public static class GameTime
             }
         }
 
-        if (hours == 24)
-        {
-            hours = 0;
-            dayCount += 1;
-        }
+        if (hours != 24) return;
+        hours = 0;
+        dayCount += 1;
     }
     
 
@@ -48,5 +46,10 @@ public static class GameTime
     public static void PauseState(bool value)
     {
         isPaused = value;
+    }
+
+    public static bool GetPauseState()
+    {
+        return isPaused;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Controller
@@ -7,6 +8,8 @@ namespace Controller
         private int startHour;
         [SerializeField] private int hourDuration;
         [SerializeField] private GameController gameController;
+        [SerializeField] private SceneController sceneController;
+        [SerializeField] private Collider col;
         private void Awake()
         {
             startHour = GameTime.Hours;
@@ -14,9 +17,15 @@ namespace Controller
 
         private void Update()
         {
-            if ((startHour + hourDuration) <= GameTime.Hours)
+            if ((startHour + hourDuration) > GameTime.Hours) return;
+            gameController.SetGameSpeed(0f);
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.tag == "Player")
             {
-                gameController.SetGameSpeed(0f);
+                sceneController.ChangeScene("SceneKantor");
             }
         }
     }
