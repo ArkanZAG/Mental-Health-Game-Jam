@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using Player.Stats;
 using RandomEvents;
 using UnityEngine;
@@ -36,6 +37,7 @@ namespace Controller
             }
             if (GameTime.Hours < 9) return;
             GameTime.PauseState(true);
+            WorkingState.SetWorkingState(true);
             PlayerStatsController.AddMoney(WorkPayment());
         }
 

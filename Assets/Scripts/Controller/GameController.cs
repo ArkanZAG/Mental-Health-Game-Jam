@@ -6,6 +6,7 @@ namespace Controller
     public class GameController : MonoBehaviour
     {
         [SerializeField] private float gameSpeed = 1;
+        
     
         void Update()
         {

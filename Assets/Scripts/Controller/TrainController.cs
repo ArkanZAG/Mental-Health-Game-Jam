@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Controller
@@ -25,7 +26,7 @@ namespace Controller
         {
             if (other.gameObject.tag == "Player")
             {
-                sceneController.ChangeScene("SceneKantor");
+                sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
             }
         }
     }

@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using RandomEvents;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,12 +21,10 @@ namespace Controller
         
         private void Update()
         {
-            if ((startHour + hourDuration) > GameTime.Hours) return;
+            if ((startHour + hourDuration) >= GameTime.Hours) return;
             GameTime.PauseState(true);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                sceneController.ChangeScene("SceneKantor");
-            }
+            if (!Input.GetKeyDown(KeyCode.Space)) return;
+            sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
         }
     
     }
