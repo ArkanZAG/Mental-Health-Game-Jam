@@ -1116,7 +1116,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900579044}
-  - component: {fileID: 900579046}
   - component: {fileID: 900579045}
   m_Layer: 0
   m_Name: RandomEventController
@@ -1150,18 +1149,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c028c89c31d148dfb152bb826f29439b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &900579046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900579043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 882b108ae8cd85c4ab68bcfe1e9a2f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &947884657
