@@ -1,6 +1,7 @@
 using DefaultNamespace;
 using RandomEvents;
 using UI;
+using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,7 @@ namespace Controller
         {
             startHour = GameTime.Hours;
             randomEvent.DoEvent();
+            GameTime.PauseState(false);
         }
 
         private void Update()

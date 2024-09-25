@@ -17,6 +17,7 @@ namespace Controller
             GameTime.PauseState(true);
             startHour = GameTime.Hours;
             randomEvent.DoEvent();
+            GameTime.PauseState(false);
         }
         
         private void Update()

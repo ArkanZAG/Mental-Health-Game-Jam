@@ -14,6 +14,7 @@ namespace Controller
         private void Awake()
         {
             startHour = GameTime.Hours;
+            GameTime.PauseState(false);
         }
 
         private void Update()

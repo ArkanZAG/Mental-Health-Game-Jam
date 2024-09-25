@@ -10,8 +10,8 @@ namespace UI
     {
         [SerializeField] private SceneController sceneController;
         
-        [SerializeField] private GameObject startingUI;
         [SerializeField] private GameObject holder;
+        
         [SerializeField] private Button taxiButton;
         [SerializeField] private Button trainButton;
         [SerializeField] private Button busButton;
@@ -38,5 +38,7 @@ namespace UI
             PlayerStatsController.AddMoney(-50);
             sceneController.ChangeScene("TransportasiBis");
         }
+        
+        //note to self, yang harusnya ganti scene bukan UI tapi controller. sidenote : currenty unable to solve how to do that
     }
 }
