@@ -22,6 +22,11 @@ namespace UI
             trainButton.onClick.AddListener(ChangeSceneTrain);
             busButton.onClick.AddListener(ChangeSceneBus);
         }
+
+        public void Display(bool value)
+        {
+            holder.SetActive(value);
+        }
         
         private void ChangeSceneTaxi()
         {
