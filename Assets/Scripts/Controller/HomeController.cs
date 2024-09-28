@@ -12,9 +12,4 @@ public class HomeController : MonoBehaviour
     {
         WorkingState.SetWorkingState(false);
     }
-
-    private void Update()
-    {
-        
-    }
 }
