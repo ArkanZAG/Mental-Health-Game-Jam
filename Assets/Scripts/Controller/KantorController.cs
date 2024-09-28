@@ -33,7 +33,6 @@ namespace Controller
             WorkPerformance();
             startScreen.SetActive(true);
             kantorUi.Display(false);
-            Debug.Log(GameTime.GetPauseState());
         }
 
         private void Update()
@@ -41,11 +40,10 @@ namespace Controller
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 GameTime.PauseState(false);
-                Debug.Log(GameTime.GetPauseState());
-                gameController.SetGameSpeed(5f);
+                gameController.SetGameSpeed(100f);
                 startScreen.SetActive(false);
             }
-            if (GameTime.Hours < 9) return;
+            if (GameTime.Hours <= 17) return;
             kantorUi.Display(true);
             GameTime.PauseState(true);
             WorkingState.SetWorkingState(true);
