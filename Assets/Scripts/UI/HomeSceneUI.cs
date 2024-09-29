@@ -55,7 +55,7 @@ namespace UI
 
         private void Display()
         {
-            if (GameTime.Hours <= 5 || GameTime.Hours >= 18) return;
+            if (GameTime.Hours < 5 || GameTime.Hours >= 18) return;
             homeSceneUI.SetActive(true);
             GameTime.PauseState(true);
             PlayerStatsController.SetExhaustionPerSecond(0f);
