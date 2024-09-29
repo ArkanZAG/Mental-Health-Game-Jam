@@ -16,9 +16,12 @@ namespace Controller
         [SerializeField] private KantorUI kantorUi;
         [SerializeField] private GameObject startScreen;
 
+        private bool isWorking;
+
         private int startWorkingHour;
         private int workDuration;
         
+        private float stressTimer;
         private float workPerformance;
         private float startWorkingStress;
         private float startWorkingExhaustion;
@@ -42,9 +45,16 @@ namespace Controller
                 GameTime.PauseState(false);
                 gameController.SetGameSpeed(100f);
                 startScreen.SetActive(false);
+                isWorking = true;
+            }
+            if (isWorking == true)
+            {
+                stressTimer += Time.deltaTime;
+                AddStressPerMinutes();
             }
             if (GameTime.Hours <= 17) return;
             kantorUi.Display(true);
+            isWorking = false;
             GameTime.PauseState(true);
             WorkingState.SetWorkingState(true);
             PlayerStatsController.AddMoney(WorkPayment());
@@ -67,6 +77,17 @@ namespace Controller
         {
             var payment = 200 * (workPerformance / 100);
             return payment;
+        }
+
+        private void AddStressPerMinutes()
+        {
+            if (isWorking != true) return;
+            if (stressTimer >= 60)
+            {
+                PlayerStatsController.AddStress(5);
+                stressTimer = 0;
+            }
+            
         }
     }
 }
