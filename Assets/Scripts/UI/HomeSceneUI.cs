@@ -53,7 +53,7 @@ namespace UI
             homeSceneUI.SetActive(false);
         }
 
-        private void Display()
+        public void Display()
         {
             if (GameTime.Hours < 5 || GameTime.Hours >= 18) return;
             homeSceneUI.SetActive(true);

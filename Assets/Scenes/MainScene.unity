@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158b4f88b2d07ae45969793c14b488bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 1
+  gameSpeed: 100
 --- !u!1 &611841307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomEvent: {fileID: 1745384716}
+  homeSceneUI: {fileID: 18958051}
 --- !u!1 &900579043
 GameObject:
   m_ObjectHideFlags: 0
