@@ -48,6 +48,11 @@ public static class GameTime
         isPaused = value;
     }
 
+    public static void SetGameTimeHours(int value)
+    {
+        hours = value;
+    }
+
     public static bool GetPauseState()
     {
         return isPaused;
