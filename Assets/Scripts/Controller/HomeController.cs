@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Controller;
 using DefaultNamespace;
 using Player.Stats;
 using RandomEvents;
@@ -11,6 +12,7 @@ public class HomeController : MonoBehaviour
 {
     [SerializeField] private RandomEvent randomEvent;
     [SerializeField] private HomeSceneUI homeSceneUI;
+    [SerializeField] private GameController gameController;
 
     private int arriveHomeTime;
     private int wakeUpTime = 4;
@@ -72,12 +74,15 @@ public class HomeController : MonoBehaviour
     private void GoToSleep()
     {
         Debug.Log("Player is Sleeping");
+        gameController.SetGameSpeed(5f);
         PlayerStatsController.AddExhaustion(-(12.5f * GetSleepDuration()));
+        
     }
 
     private void GetSomeRest()
     {
         Debug.Log("Player is Resting");
+        gameController.SetGameSpeed(5f);
         PlayerStatsController.AddStress(-(5 * GetRestDuration()));
     }
 

@@ -16,7 +16,7 @@ public class PlayerStats
    public float maximumStress = 100f;
    
    
-   public float money;
+   public float money = 500f;
    
    // Mini Game related attributes
    public IdleGameStats idleGameStats = new IdleGameStats();

@@ -17,6 +17,7 @@ namespace Controller
         [SerializeField] private GameObject startScreen;
 
         private bool isWorking;
+        private bool isPaid;
 
         private int startWorkingHour;
         private int workDuration;
@@ -30,12 +31,17 @@ namespace Controller
 
         private void Start()
         {
-            startWorkingHour = GameTime.Hours;
+            if (GameTime.Hours <= 9)
+            {
+                GameTime.SetGameTimeHours(9);
+                startWorkingHour = GameTime.Hours;
+            }
             startWorkingStress = PlayerStatsController.Stress;
             startWorkingExhaustion = PlayerStatsController.Exhaustion;
             WorkPerformance();
             startScreen.SetActive(true);
             kantorUi.Display(false);
+            isPaid = false;
         }
 
         private void Update()
@@ -57,7 +63,8 @@ namespace Controller
             isWorking = false;
             GameTime.PauseState(true);
             WorkingState.SetWorkingState(true);
-            PlayerStatsController.AddMoney(WorkPayment());
+            GetPaid();
+            isPaid = true;
         }
 
         private void WorkPerformance()
@@ -86,6 +93,15 @@ namespace Controller
             {
                 PlayerStatsController.AddStress(5);
                 stressTimer = 0;
+            }
+            
+        }
+
+        private void GetPaid()
+        {
+            if (!isPaid)
+            {
+                PlayerStatsController.AddMoney(WorkPayment());
             }
             
         }
