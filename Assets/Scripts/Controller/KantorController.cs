@@ -69,7 +69,7 @@ namespace Controller
 
         private void WorkPerformance()
         {
-            workPerformance = 100 * (1 - (startWorkingStress - startWorkingExhaustion) / 200) + (miniGameFinished * 5) -
+            workPerformance = 100 * (1 - (startWorkingStress - startWorkingExhaustion) / 200) + (PlayerStatsController.GetWorkMinigameAmount() * 5) -
                               LateWorkPenalty();
         }
 
