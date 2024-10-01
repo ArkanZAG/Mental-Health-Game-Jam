@@ -26,6 +26,7 @@ public class HomeController : MonoBehaviour
         if (GameTime.DayCount > 1)
         {
             arriveHomeTime = GameTime.Hours;
+            PlayerStatsController.ResetWorkMinigameAmount();
         }
     }
 
