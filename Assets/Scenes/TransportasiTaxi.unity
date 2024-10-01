@@ -549,6 +549,10 @@ PrefabInstance:
       propertyPath: playGamePrefabs
       value: 
       objectReference: {fileID: 1132712074}
+    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
+      propertyPath: closeRestMiniGameButton
+      value: 
+      objectReference: {fileID: 2899781391323661048}
     - target: {fileID: 7861183567956543544, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -860,6 +864,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3165571681896731674, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4497322190789978804, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -957,6 +965,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+--- !u!114 &2899781391323661048 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8802828307311411022, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+  m_PrefabInstance: {fileID: 2899781391323661047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -966,6 +985,6 @@ SceneRoots:
   - {fileID: 668010596}
   - {fileID: 710635087}
   - {fileID: 1983675472}
-  - {fileID: 961579848}
   - {fileID: 1878911498}
+  - {fileID: 961579848}
   - {fileID: 2899781391323661047}

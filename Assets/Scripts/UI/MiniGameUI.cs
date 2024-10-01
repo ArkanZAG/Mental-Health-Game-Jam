@@ -6,11 +6,18 @@ namespace UI
 {
     public class MiniGameUI : MonoBehaviour
     {
+        // benarkan fungsi untuk menutup minigame
+        
         [SerializeField] private Button miniGameButton;
         [SerializeField] private GameObject miniGameHolder;
+        
         [SerializeField] private Button workButton;
         [SerializeField] private Button restButton;
         [SerializeField] private Button playButton;
+
+        [SerializeField] private Button closeWorkMiniGameButton;
+        [SerializeField] private Button closeRestMiniGameButton;
+        [SerializeField] private Button closePlayMiniGameButton;
 
         [SerializeField] private GameObject sleepPrefabs;
         [SerializeField] private GameObject playGamePrefabs;
@@ -22,6 +29,9 @@ namespace UI
             restButton.onClick.AddListener(Resting);
             playButton.onClick.AddListener(DisplayPlayMiniGame);
             miniGameButton.onClick.AddListener(OnClick);
+            closePlayMiniGameButton.onClick.AddListener(DisplayMiniGame);
+            closeRestMiniGameButton.onClick.AddListener(DisplayMiniGame);
+            closePlayMiniGameButton.onClick.AddListener(DisplayMiniGame);
             workPrefabs.SetActive(false);
             playGamePrefabs.SetActive(false);
             sleepPrefabs.SetActive(false);
@@ -46,19 +56,49 @@ namespace UI
         {
             miniGameHolder.SetActive(false);
         }
+
+        private void DisplayMiniGame()
+        {
+            if (workPrefabs.activeSelf || sleepPrefabs.activeSelf || playGamePrefabs.activeSelf)
+            {
+                workPrefabs.SetActive(false);
+                sleepPrefabs.SetActive(false);
+                playGamePrefabs.SetActive(false);
+            }
+        }
         private void DisplayWorkMiniGame()
         {
-            workPrefabs.SetActive(true);
+            if (!sleepPrefabs.activeSelf && !playGamePrefabs.activeSelf)
+            {
+                workPrefabs.SetActive(true);
+            }
+            else
+            {
+                throw new Exception("Unable to open cause another one already opened");
+            }
         }
-
         private void Resting()
         {
-            sleepPrefabs.SetActive(true);
+            if (!workPrefabs.activeSelf && !playGamePrefabs.activeSelf)
+            {
+                sleepPrefabs.SetActive(true);
+            }
+            else
+            {
+                throw new Exception("Unable to open cause another one already opened");
+            }
         }
 
         private void DisplayPlayMiniGame()
         {
-            playGamePrefabs.SetActive(true);
+            if (!workPrefabs.activeSelf && sleepPrefabs.activeSelf)
+            {
+                playGamePrefabs.SetActive(true);
+            }
+            else
+            {
+                throw new Exception("Unable to open cause another one already opened");
+            }
         }
     }
 }
