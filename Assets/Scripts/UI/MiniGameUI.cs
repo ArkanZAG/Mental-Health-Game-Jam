@@ -1,4 +1,5 @@
 using System;
+using Controller;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,8 +7,6 @@ namespace UI
 {
     public class MiniGameUI : MonoBehaviour
     {
-        // benarkan fungsi untuk menutup minigame
-        
         [SerializeField] private Button miniGameButton;
         [SerializeField] private GameObject miniGameHolder;
         
@@ -29,14 +28,15 @@ namespace UI
             restButton.onClick.AddListener(Resting);
             playButton.onClick.AddListener(DisplayPlayMiniGame);
             miniGameButton.onClick.AddListener(OnClick);
-            closePlayMiniGameButton.onClick.AddListener(DisplayMiniGame);
-            closeRestMiniGameButton.onClick.AddListener(DisplayMiniGame);
-            closePlayMiniGameButton.onClick.AddListener(DisplayMiniGame);
+            closeWorkMiniGameButton.onClick.AddListener(CloseMiniGame);
+            closeRestMiniGameButton.onClick.AddListener(CloseMiniGame);
+            closePlayMiniGameButton.onClick.AddListener(CloseMiniGame);
             workPrefabs.SetActive(false);
             playGamePrefabs.SetActive(false);
             sleepPrefabs.SetActive(false);
             miniGameHolder.SetActive(false);
         }
+
         private void OnClick()
         {
             if (miniGameHolder.activeSelf)
@@ -57,7 +57,7 @@ namespace UI
             miniGameHolder.SetActive(false);
         }
 
-        private void DisplayMiniGame()
+        private void CloseMiniGame()
         {
             if (workPrefabs.activeSelf || sleepPrefabs.activeSelf || playGamePrefabs.activeSelf)
             {
@@ -91,7 +91,7 @@ namespace UI
 
         private void DisplayPlayMiniGame()
         {
-            if (!workPrefabs.activeSelf && sleepPrefabs.activeSelf)
+            if (!workPrefabs.activeSelf && !sleepPrefabs.activeSelf)
             {
                 playGamePrefabs.SetActive(true);
             }
