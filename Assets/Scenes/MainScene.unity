@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 18958052}
   - component: {fileID: 18958051}
   m_Layer: 5
-  m_Name: UI
+  m_Name: =UI=
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,6 +1108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomEvent: {fileID: 1745384716}
   homeSceneUI: {fileID: 18958051}
+  gameController: {fileID: 455138812}
 --- !u!1 &900579043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,9 +2349,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
+  - {fileID: 18958055}
   - {fileID: 1617689891}
   - {fileID: 611841311}
   - {fileID: 210334520}
   - {fileID: 1940325480}
-  - {fileID: 18958055}
   - {fileID: 1745384717}
