@@ -71,6 +71,7 @@ namespace UI
             if (!sleepPrefabs.activeSelf && !playGamePrefabs.activeSelf)
             {
                 workPrefabs.SetActive(true);
+                CloseUI();
             }
             else
             {
@@ -82,6 +83,7 @@ namespace UI
             if (!workPrefabs.activeSelf && !playGamePrefabs.activeSelf)
             {
                 sleepPrefabs.SetActive(true);
+                CloseUI();
             }
             else
             {
@@ -94,6 +96,7 @@ namespace UI
             if (!workPrefabs.activeSelf && !sleepPrefabs.activeSelf)
             {
                 playGamePrefabs.SetActive(true);
+                CloseUI();
             }
             else
             {
