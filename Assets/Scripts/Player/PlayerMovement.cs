@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        playerRigidBody.velocity = new Vector3(horizontalInput * playerMovementSpeed, 0, verticalInput * playerMovementSpeed);
+        playerRigidBody.velocity = new Vector3(horizontalInput * playerMovementSpeed, verticalInput * playerMovementSpeed, 0);
     }
 
     private void Update()
