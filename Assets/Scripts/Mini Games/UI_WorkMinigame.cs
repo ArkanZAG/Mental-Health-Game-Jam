@@ -35,7 +35,7 @@ public class UI_WorkMinigame : MonoBehaviour
         {6, 0 },
     };
 
-    private int _maxColorAmount = 6;
+    private int _maxColorAmount = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -144,7 +144,7 @@ public class UI_WorkMinigame : MonoBehaviour
 
     private void SpawnColorTableHead()
     {
-        for (int i = 0; i < _maxColorAmount; i++)
+        for (int i = 0; i < _colorNumberCount.Count; i++)
         {
             GameObject newCell = Instantiate(_cellPrefab, _cellHeadParent.transform);
             newCell.GetComponent<Image>().color = AssignColorFromInt(i+1);
@@ -171,7 +171,7 @@ public class UI_WorkMinigame : MonoBehaviour
 
         // Enumerate random color list
         _tableColorList = Enumerable
-            .Range(0, 36)
+            .Range(0, _maxColorAmount*_colorNumberCount.Count)
             .Select(__ => color()).ToList<Color>();
 
         // Instantiate cell with color in table parent
