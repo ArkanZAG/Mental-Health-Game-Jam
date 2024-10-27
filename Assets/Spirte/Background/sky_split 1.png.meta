@@ -1,0 +1,423 @@
+fileFormatVersion: 2
+guid: 731f4b6a9b7fd27429411832d84378b8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sky_split 1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 496
+        width: 352
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343b31f1b3b85e94891ee37494da40e2
+      internalID: -890618003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 428
+        width: 352
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61f1decf81708e44963dfee79636d33
+      internalID: -968747873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 384
+        width: 352
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3157e71afc4c0c4582cad9580c43056
+      internalID: 852507922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_16
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 412
+        width: 352
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d8816a68ba38f45b6718ff11fa06eb
+      internalID: -1621468759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_17
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 284
+        width: 352
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26670e17e0795b0418873e114485cf4d
+      internalID: -506198171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 288
+        width: 352
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1610cd3d734c5242af7ecc6cf2c17cf
+      internalID: 544356676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_33
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 175
+        width: 352
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797c0f5823e47c8429d43bd9c5d32ef7
+      internalID: 1465574327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_34
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 268
+        width: 352
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca0bc4617c9f6740b050690f024bbf9
+      internalID: 1361503119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_35
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 140
+        width: 352
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7687b66ab55abbb4a97267abfa2c1a2b
+      internalID: -1300775139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 73
+        width: 352
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09385a58c48eed24084548d197199f83
+      internalID: -1476104315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 17
+        width: 352
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fc56f9992050940b26441fb81d58c5
+      internalID: -890455150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sky_split 1_43
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 80
+        width: 352
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb14189373424314fa138b7f3f9f948c
+      internalID: -60031064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sky_split 1_0: -890618003
+      sky_split 1_1: -968747873
+      sky_split 1_10: 1027340641
+      sky_split 1_11: 894087836
+      sky_split 1_12: -1794116297
+      sky_split 1_13: -2138277248
+      sky_split 1_14: 306048440
+      sky_split 1_15: 852507922
+      sky_split 1_16: -1621468759
+      sky_split 1_17: -506198171
+      sky_split 1_18: 1129256604
+      sky_split 1_19: 1379993731
+      sky_split 1_2: -648794224
+      sky_split 1_20: -1689711759
+      sky_split 1_21: -1179111156
+      sky_split 1_22: -1035995316
+      sky_split 1_23: 2074833791
+      sky_split 1_24: -1351603644
+      sky_split 1_25: -1223488316
+      sky_split 1_26: 1334439151
+      sky_split 1_27: -1672691740
+      sky_split 1_28: 544356676
+      sky_split 1_29: 1204954280
+      sky_split 1_3: 1140965153
+      sky_split 1_30: -1548515060
+      sky_split 1_31: -1545158520
+      sky_split 1_32: -597401205
+      sky_split 1_33: 1465574327
+      sky_split 1_34: 1361503119
+      sky_split 1_35: -1300775139
+      sky_split 1_36: 1367642795
+      sky_split 1_37: 419118751
+      sky_split 1_38: -5391795
+      sky_split 1_39: 1165145757
+      sky_split 1_4: 1838943249
+      sky_split 1_40: 1817327455
+      sky_split 1_41: -1476104315
+      sky_split 1_42: -890455150
+      sky_split 1_43: -60031064
+      sky_split 1_5: 1504881115
+      sky_split 1_6: -857412395
+      sky_split 1_7: 1657722510
+      sky_split 1_8: 1425122326
+      sky_split 1_9: -491390592
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
