@@ -24,7 +24,6 @@ public class UI_WorkMinigame : MonoBehaviour
     private int _activeCellIndex = 0;
 
     private List<Color> _tableColorList = new List<Color>();
-    private List<int> _colorNumberList = new List<int> { 1, 2, 3, 4, 5, 6 };
     private Dictionary<int, int> _colorNumberCount = new Dictionary<int, int>
     {
         {1, 0},
@@ -45,13 +44,14 @@ public class UI_WorkMinigame : MonoBehaviour
         _activeCell = _cellList[0];
         _activeCell.GetComponent<Outline>().enabled = true;
         CompletionHandler();
+        _completedWorkText.text = string.Format("Sorted Table: {0}", PlayerStatsController.GetWorkMinigameAmount());
     }
 
     // Update is called once per frame
     void Update()
     {
         ArrowKeyInputHandler();
-        EnterKeyInputHandler();
+        SpaceKeyInputHandler();
     }
 
     private void ArrowKeyInputHandler()
@@ -66,16 +66,16 @@ public class UI_WorkMinigame : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-
-            if (_activeCellIndex >= 6)
+            Debug.Log(_activeCellIndex);
+            if (_activeCellIndex >= _colorNumberCount.Count)
             {
-                _activeCellIndex -= 6;
+                _activeCellIndex -= _colorNumberCount.Count;
             }
         } else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (_activeCellIndex < 30)
+            if (_activeCellIndex < (_colorNumberCount.Count*(_maxColorAmount-1)))
             {
-                _activeCellIndex += 6;
+                _activeCellIndex += _colorNumberCount.Count;
             }
         } else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -85,7 +85,7 @@ public class UI_WorkMinigame : MonoBehaviour
             }
         } else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if(_activeCellIndex < 35)
+            if(_activeCellIndex < _cellList.Count-1)
             {
                 _activeCellIndex += 1;
             }
@@ -95,9 +95,9 @@ public class UI_WorkMinigame : MonoBehaviour
         _activeCell.GetComponent<Outline>().enabled = true;
     }
 
-    private void EnterKeyInputHandler()
+    private void SpaceKeyInputHandler()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (_activeCell && !_chosenFirstCell)
             {
@@ -128,7 +128,7 @@ public class UI_WorkMinigame : MonoBehaviour
     {
         for (int i = 0; i < _cellHeadList.Count; i++)
         {
-            for (int j = i; j < i+30; j+=6 )
+            for (int j = i; j < i+_colorNumberCount.Count*(_maxColorAmount-1); j+=_colorNumberCount.Count)
             {
                 if (_cellHeadList[i].GetComponent<Image>().color != _cellList[j].GetComponent<Image>().color)
                 {
@@ -137,8 +137,8 @@ public class UI_WorkMinigame : MonoBehaviour
             }
         }
         PlayerStatsController.IncrementWorkMinigameAmount();
-        _completedWorkText.text = string.Format("Completed work: {0}", PlayerStatsController.GetWorkMinigameAmount());
-        Debug.Log(PlayerStatsController.GetWorkMinigameAmount());
+        _completedWorkText.text = string.Format("Sorted Table: {0}", PlayerStatsController.GetWorkMinigameAmount());
+        //Debug.Log(PlayerStatsController.GetWorkMinigameAmount());
         ShuffleRandomColorTable();
     }
 
@@ -154,9 +154,11 @@ public class UI_WorkMinigame : MonoBehaviour
 
     private void SpawnRandomColorTable()
     {
-        // Delegat function for generating random color
+        List<int> _colorNumberList = new List<int> { 1, 2, 3, 4, 5, 6 };
+        // Delegate function for generating random color
         DelegateColor color = delegate
         {
+            
             System.Random random = new System.Random();
             var index = random.Next(0, _colorNumberList.Count);
             var chosenColor = _colorNumberList[index];
@@ -198,7 +200,7 @@ public class UI_WorkMinigame : MonoBehaviour
 
             // Assign randomized color to cell list
             _cellList[i].GetComponent<Image>().color = _tableColorList[i];
-            Debug.Log("Swap-" + i);
+            //Debug.Log("Swap-" + i);
         }
         _cellList[^1].GetComponent<Image>().color = _tableColorList[^1];
 
@@ -208,19 +210,19 @@ public class UI_WorkMinigame : MonoBehaviour
         switch (color)
         {
             case 1:
-                return new Color32(0xea, 0x77, 0x77, 0xff); // EA7777
+                return new Color32(0x93, 0x37, 0x37, 0xff); // 933737
             case 2:
-                return new Color32(0xa9, 0xed, 0x80, 0xff); // A9ED8A
+                return new Color32(0x1a, 0x66, 0x2c, 0xff); // 1A662C
             case 3:
                 return new Color32(0xa7, 0x6c, 0x98, 0xff); // A76C98
             case 4:
-                return new Color32(0x8c, 0xcb, 0xcf, 0xff); // 8CCBCF
+                return new Color32(0x37, 0x86, 0x93, 0xff); // 378693
             case 5:
                 return new Color32(0xc2, 0x87, 0x52, 0xff); // C28752
             case 6:
-                return Color.white;
-            default:
                 return Color.gray;
+            default:
+                return Color.white;
         }
     }
 }
