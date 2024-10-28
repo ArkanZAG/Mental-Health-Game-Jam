@@ -5,7 +5,7 @@ using UnityEngine;
 public class IdleGameStats
 {
     [SerializeField] private int _coin = 0;
-    [SerializeField] private int _investmentAmount = 0;
+    [SerializeField] private int _investmentAmount = 1;
 
     public int Coin {
         get => _coin;
@@ -18,7 +18,7 @@ public class IdleGameStats
     }
 
     public void AddCoin() {
-        Coin += 1 + InvestmentAmount;
+        Coin += InvestmentAmount;
     }
 
     public void BuyInvestment() {

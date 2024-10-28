@@ -55,7 +55,7 @@ public class CoinPool : MonoBehaviour
         isLeft = !isLeft;
     }
 
-    public void SpawnCoin() {
+    private void SpawnCoin() {
         PlayerStatsController.IncrementIdleCoin();
         pool.Get();
     }

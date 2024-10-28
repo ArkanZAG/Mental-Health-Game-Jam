@@ -95,5 +95,11 @@ namespace Player.Stats
         public static void IncrementWorkMinigameAmount() => _playerStats.workGameStats.Increment();
 
         public static void IncrementIdleCoin() => _playerStats.idleGameStats.AddCoin();
+        
+        public static int GetIdleGameCoin() => _playerStats.idleGameStats.Coin;
+
+        public static int GetIdleGameInvestment() => _playerStats.idleGameStats.InvestmentAmount;
+
+        public static void BuyInvestmentIdleGame() => _playerStats.idleGameStats.BuyInvestment();
     }
 }

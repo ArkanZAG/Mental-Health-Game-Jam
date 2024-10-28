@@ -1,6 +1,7 @@
 using Player.Stats;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class UI_SleepMinigame : MonoBehaviour
     public Slider slider;
     [SerializeField] private RectTransform _barBackground;
     [SerializeField] private RectTransform _barCenter;
+    [SerializeField] private Animator _buttonAnimator;
+    [SerializeField] private TextMeshProUGUI _sleepIndicatorText;
 
     private float _moveRate = 1.05f;
     private float _maxVal;
@@ -29,6 +32,7 @@ public class UI_SleepMinigame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SpaceKeyInputHandler();
         timer = Time.deltaTime;
 
         if (slider.value <= slider.minValue)
@@ -50,7 +54,14 @@ public class UI_SleepMinigame : MonoBehaviour
         // If sleep succeeds
         if (_moveRate <= 0.05f)
         {
-            PlayerStatsController.SetExhaustionPerSecond(-1f);
+            PlayerStatsController.SetExhaustionPerSecond(-0.05f);
+            _sleepIndicatorText.text = "Sleeping...";
+        } else if (_moveRate >= 2.00){
+            PlayerStatsController.SetExhaustionPerSecond(0.05f);
+            _sleepIndicatorText.text = "Too distracted to sleep...";
+        } else {
+            PlayerStatsController.SetExhaustionPerSecond(0.05f);
+            _sleepIndicatorText.text = "Trying to sleep...";
         }
     }
 
@@ -68,5 +79,12 @@ public class UI_SleepMinigame : MonoBehaviour
             }
         }
         print(_moveRate);
+    }
+
+    private void SpaceKeyInputHandler() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            triggerInput();
+            _buttonAnimator.SetTrigger("Down");
+        }
     }
 }

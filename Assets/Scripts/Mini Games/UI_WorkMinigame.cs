@@ -39,12 +39,16 @@ public class UI_WorkMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Spawn Table
         SpawnColorTableHead();
         SpawnRandomColorTable();
         _activeCell = _cellList[0];
         _activeCell.GetComponent<Outline>().enabled = true;
+
         CompletionHandler();
         _completedWorkText.text = string.Format("Sorted Table: {0}", PlayerStatsController.GetWorkMinigameAmount());
+
+        StartCoroutine(WaitThreeSeconds());
     }
 
     // Update is called once per frame
@@ -54,10 +58,24 @@ public class UI_WorkMinigame : MonoBehaviour
         SpaceKeyInputHandler();
     }
 
+    private IEnumerator WaitThreeSeconds() {
+        Debug.Log("Start waiting at " + Time.time);
+
+        yield return new WaitForSeconds(3.00f);
+
+        Debug.Log("Start working at " + Time.time);
+        PlayerStatsController.SetExhaustionPerSecond(0.075f);
+        PlayerStatsController.SetStressPerSecond(0.05f);
+    }
+
     private void ArrowKeyInputHandler()
     {
+        
         if (_activeCell != null && Input.anyKey)
         {
+            PlayerStatsController.SetExhaustionPerSecond(0.075f);
+            PlayerStatsController.SetStressPerSecond(0.05f);
+            Debug.Log("key!");
             if (_activeCell != _chosenFirstCell)
             {
                 _activeCell.GetComponent<Outline>().enabled = false;
@@ -66,6 +84,7 @@ public class UI_WorkMinigame : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            
             Debug.Log(_activeCellIndex);
             if (_activeCellIndex >= _colorNumberCount.Count)
             {
@@ -97,8 +116,12 @@ public class UI_WorkMinigame : MonoBehaviour
 
     private void SpaceKeyInputHandler()
     {
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            PlayerStatsController.SetExhaustionPerSecond(0.075f);
+            PlayerStatsController.SetStressPerSecond(0.05f);
+
             if (_activeCell && !_chosenFirstCell)
             {
                 _chosenFirstCell = _cellList[_activeCellIndex];
@@ -225,4 +248,6 @@ public class UI_WorkMinigame : MonoBehaviour
                 return Color.white;
         }
     }
+
+    
 }
