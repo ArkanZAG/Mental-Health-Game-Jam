@@ -179,14 +179,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hello,
+  m_text: 'Dear Mom & Dad
 
-    You haven''t picked up your phone, what''s going on? I know
-    you''re deep at work but it''s never like this. Please pick up the phone
+    It has been hard without you, but I still want to
+    make you proud. I wish you were here, but I won''t give up.
 
-
-    -Your
-    Friend'
+    Thank you, for
+    everything.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad51811dc163123458ebb622ca71291e, type: 2}
   m_sharedMaterial: {fileID: 9046241583596742227, guid: ad51811dc163123458ebb622ca71291e, type: 2}
@@ -868,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 327427867509767082, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 327427867509767082, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
       propertyPath: m_LocalPosition.z
@@ -904,7 +903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4530087643160819534, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.61
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930177236750598579, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389359690061527322, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
       propertyPath: m_Name
@@ -912,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8453415240942984089, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

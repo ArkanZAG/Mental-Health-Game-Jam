@@ -252,8 +252,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Millions of people lost their families and relatives during Covid. \n\nThe
-    pandemic was long over, but some never healed from the scar.\n\nWould another
-    fall from it, years later?"
+    pandemic was long over, but some never healed from the scar.\n\nWould Covid take
+    another life, years later?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad51811dc163123458ebb622ca71291e, type: 2}
   m_sharedMaterial: {fileID: 9046241583596742227, guid: ad51811dc163123458ebb622ca71291e, type: 2}
