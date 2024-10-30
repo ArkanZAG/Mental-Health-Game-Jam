@@ -2,9 +2,9 @@ using DefaultNamespace;
 using RandomEvents;
 using UnityEngine;
 
-namespace Controller.Trasportasi
+namespace Controller.TrasportasiKontroller
 {
-    public class TaxiController : MonoBehaviour
+    public class TaxiController : Transportasi.Transportasi
     {
         private int startHour;
         [SerializeField] private int hourDuration;

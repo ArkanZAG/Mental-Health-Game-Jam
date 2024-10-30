@@ -8,6 +8,7 @@ namespace Background
     {
         [SerializeField] private GameObject background;
         [SerializeField] private GameObject foreground;
+        [SerializeField] private Transportasi.Transportasi transportasi;
         [SerializeField] private int backgroundSpeed;
         [SerializeField] private float foregroundSpeed;
 
@@ -24,7 +25,6 @@ namespace Background
 
         private void Slide()
         {
-            
             var newPositionForeground = foreground.transform.position;
             newPositionForeground.x += -Time.deltaTime * foregroundSpeed;
             foreground.transform.position = newPositionForeground;

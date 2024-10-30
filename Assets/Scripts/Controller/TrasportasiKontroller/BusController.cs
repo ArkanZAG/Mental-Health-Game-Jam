@@ -2,9 +2,9 @@ using DefaultNamespace;
 using RandomEvents;
 using UnityEngine;
 
-namespace Controller.Trasportasi
+namespace Controller.TrasportasiKontroller
 {
-    public class BusController : MonoBehaviour
+    public class BusController : Transportasi.Transportasi
     {
         private int startHour;
         [SerializeField] private int hourDuration;
@@ -25,5 +25,7 @@ namespace Controller.Trasportasi
             if (!Input.GetKeyDown(KeyCode.Space)) return;
             sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
         }
+
+        public int HourDuration => hourDuration;
     }
 }

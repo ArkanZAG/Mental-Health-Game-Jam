@@ -1,9 +1,9 @@
 using DefaultNamespace;
 using UnityEngine;
 
-namespace Controller.Trasportasi
+namespace Controller.TrasportasiKontroller
 {
-    public class TrainController : MonoBehaviour
+    public class TrainController : Transportasi.Transportasi
     {
         private int startHour;
         [SerializeField] private int hourDuration;
