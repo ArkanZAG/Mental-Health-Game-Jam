@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Controller.TrasportasiKontroller
 {
-    public class TrainController : Transportasi.Transportasi
+    public class TrainController : Transportasi.TransportationController
     {
         private int startHour;
         [SerializeField] private int hourDuration;
@@ -18,7 +18,7 @@ namespace Controller.TrasportasiKontroller
 
         private void Update()
         {
-            if ((startHour + hourDuration) > GameTime.Hours) return;
+            if ((GetHourDuration()) > GameTime.Hours) return;
             gameController.SetGameSpeed(0f);
         }
 
@@ -28,6 +28,11 @@ namespace Controller.TrasportasiKontroller
             {
                 sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
             }
+        }
+        
+        public int GetHourDuration()
+        {
+            return startHour + transportDuration;
         }
     }
 }

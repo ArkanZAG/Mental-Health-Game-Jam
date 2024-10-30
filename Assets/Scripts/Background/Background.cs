@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Transportasi;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,6 +12,10 @@ namespace Background
         [SerializeField] private Transportasi.Transportasi transportasi;
         [SerializeField] private int foregroundSpeed;
         [SerializeField] private float backgroundSpeed;
+
+        [SerializeField] private GameObject noonBackground;
+        [SerializeField] private GameObject afterNoonBackground;
+        [SerializeField] private GameObject nightBackground;
 
         [SerializeField] private Transform maxPosition;
 
