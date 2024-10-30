@@ -9,7 +9,7 @@ namespace Background
     {
         [SerializeField] private GameObject foreground;
         [SerializeField] private GameObject background;
-        [SerializeField] private Transportasi.Transportasi transportasi;
+        [SerializeField] private TransportationController transportasi;
         [SerializeField] private int foregroundSpeed;
         [SerializeField] private float backgroundSpeed;
 
