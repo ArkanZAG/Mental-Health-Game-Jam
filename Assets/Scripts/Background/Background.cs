@@ -6,11 +6,11 @@ namespace Background
 {
     public class Background : MonoBehaviour
     {
-        [SerializeField] private GameObject background;
         [SerializeField] private GameObject foreground;
+        [SerializeField] private GameObject background;
         [SerializeField] private Transportasi.Transportasi transportasi;
-        [SerializeField] private int backgroundSpeed;
-        [SerializeField] private float foregroundSpeed;
+        [SerializeField] private int foregroundSpeed;
+        [SerializeField] private float backgroundSpeed;
 
         [SerializeField] private Transform maxPosition;
 
@@ -25,14 +25,14 @@ namespace Background
 
         private void Slide()
         {
-            var newPositionForeground = foreground.transform.position;
-            newPositionForeground.x += -Time.deltaTime * foregroundSpeed;
-            foreground.transform.position = newPositionForeground;
+            var newPositionBackground = background.transform.position;
+            newPositionBackground.x += -Time.deltaTime * backgroundSpeed;
+            background.transform.position = newPositionBackground;
             
             for (int i = 0; i < backgroundElements.Count; i++)
             {
                 var newPosition = backgroundElements[i].transform.position;
-                newPosition.x += -Time.deltaTime * backgroundSpeed;
+                newPosition.x += -Time.deltaTime * foregroundSpeed;
                 backgroundElements[i].transform.position = newPosition;
             }
         }

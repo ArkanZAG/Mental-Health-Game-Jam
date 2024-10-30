@@ -225,6 +225,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 61973701174918946, guid: 21357f2590d8fa243aa727c44f4974ce, type: 3}
   m_PrefabInstance: {fileID: 7752229414059912879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &217379392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7389359690061527322, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
+  m_PrefabInstance: {fileID: 6355136587273595640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &228745105 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 313232946343625286, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
@@ -525,7 +530,7 @@ GameObject:
   - component: {fileID: 407524612}
   - component: {fileID: 407524613}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,8 +567,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f07ed55807d0a499bf8b87333d4c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 407524611}
-  backgroundSpeed: 2
+  foreground: {fileID: 407524611}
+  background: {fileID: 217379392}
+  transportasi: {fileID: 62167469}
+  foregroundSpeed: -10
+  backgroundSpeed: 0
+  maxPosition: {fileID: 0}
+  backgroundElements: []
 --- !u!4 &533937520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4788774463979446417, guid: 475b72938894afd42b8052e0882574af, type: 3}
@@ -1735,7 +1745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7389359690061527322, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
       propertyPath: m_Name
-      value: Foreground
+      value: Background
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
