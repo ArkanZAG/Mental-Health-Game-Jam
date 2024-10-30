@@ -7,8 +7,8 @@ namespace Background
 {
     public class Background : MonoBehaviour
     {
-        [SerializeField] private GameObject foreground;
-        [SerializeField] private GameObject background;
+        [FormerlySerializedAs("sforeground")] [FormerlySerializedAs("foreground")] [SerializeField] private GameObject background;
+        [FormerlySerializedAs("background")] [SerializeField] private GameObject foreground;
         [SerializeField] private TransportationController transportasi;
         [SerializeField] private int foregroundSpeed;
         [SerializeField] private float backgroundSpeed;
@@ -19,7 +19,7 @@ namespace Background
 
         [SerializeField] private Transform maxPosition;
 
-        [SerializeField] private List<GameObject> backgroundElements;
+        [FormerlySerializedAs("backgroundElements")] [SerializeField] private List<GameObject> foregroundElements;
         
     
         void Update()
@@ -30,28 +30,28 @@ namespace Background
 
         private void Slide()
         {
-            var newPositionBackground = background.transform.position;
+            var newPositionBackground = foreground.transform.position;
             newPositionBackground.x += -Time.deltaTime * backgroundSpeed;
-            background.transform.position = newPositionBackground;
+            foreground.transform.position = newPositionBackground;
             
-            for (int i = 0; i < backgroundElements.Count; i++)
+            for (int i = 0; i < foregroundElements.Count; i++)
             {
-                var newPosition = backgroundElements[i].transform.position;
+                var newPosition = foregroundElements[i].transform.position;
                 newPosition.x += -Time.deltaTime * foregroundSpeed;
-                backgroundElements[i].transform.position = newPosition;
+                foregroundElements[i].transform.position = newPosition;
             }
         }
 
         private void TeleportBackground()
         {
-            for (int i = 0; i < backgroundElements.Count; i++)
+            for (int i = 0; i < foregroundElements.Count; i++)
             {
-                if (backgroundElements[i].transform.position.x <= maxPosition.position.x)
+                if (foregroundElements[i].transform.position.x <= maxPosition.position.x)
                 {
-                    backgroundElements[i].transform.position = new Vector3(
-                        -backgroundElements[i].transform.position.x,
-                        backgroundElements[i].transform.position.y,
-                        backgroundElements[i].transform.position.z 
+                    foregroundElements[i].transform.position = new Vector3(
+                        -foregroundElements[i].transform.position.x,
+                        foregroundElements[i].transform.position.y,
+                        foregroundElements[i].transform.position.z 
                     );
                 }
             }

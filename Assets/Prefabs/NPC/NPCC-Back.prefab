@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582226318695172246}
   - component: {fileID: 338237676821148511}
+  - component: {fileID: 7869905941418698074}
   m_Layer: 0
   m_Name: NPCC-Back
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7869905941418698074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921341521190765637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f618211a47495e97253d8e713c4810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

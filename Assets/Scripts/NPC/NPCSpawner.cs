@@ -7,6 +7,10 @@ namespace NPC
 {
     public class NPCSpawner : MonoBehaviour
     {
+        [Header("Seat Position")]
+        [SerializeField] private int frontSeat;
+        [SerializeField] private int backSeat;
+        [Header("Npc")]
         [SerializeField] private List<GameObject> npcPrefabsFront;
         [SerializeField] private List<GameObject> npcPrefabsBack;
         [SerializeField] private List<Transform> spawnPoint;
@@ -27,7 +31,7 @@ namespace NPC
                 if (Random.value <= spawnChance)
                 {
                     GameObject npcPrefabs;
-                    if (i < 9)
+                    if (i < frontSeat)
                     {
                         npcPrefabs = npcPrefabsFront[GetRandomIndex(npcPrefabsFront)];
                     }
@@ -36,7 +40,8 @@ namespace NPC
                         npcPrefabs = npcPrefabsBack[GetRandomIndex(npcPrefabsBack)];
                     }
 
-                    Instantiate(npcPrefabs, spawnPoint[i]);
+                    var NPC = Instantiate(npcPrefabs, spawnPoint[i]);
+                    var NPCComponent = NPC.GetComponent<NonPlayableCharacter>();
                 }
                 
             }

@@ -1,3 +1,4 @@
+using System;
 using DefaultNamespace;
 using RandomEvents;
 using UnityEngine;
@@ -29,6 +30,10 @@ namespace Controller.TrasportasiKontroller
         {
             return startHour + transportDuration;
         }
-        
+
+        public void OnTriggerEnter(Collider other)
+        {
+            
+        }
     }
 }
