@@ -9,7 +9,7 @@ namespace Background
         [SerializeField] private GameObject background;
         [SerializeField] private GameObject foreground;
         [SerializeField] private int backgroundSpeed;
-        [SerializeField] private int foregroundSpeed;
+        [SerializeField] private float foregroundSpeed;
 
         [SerializeField] private Transform maxPosition;
 
