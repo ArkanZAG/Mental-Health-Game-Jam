@@ -1,9 +1,8 @@
 using DefaultNamespace;
 using RandomEvents;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace Controller
+namespace Controller.Trasportasi
 {
     public class TaxiController : MonoBehaviour
     {

@@ -15,8 +15,6 @@ namespace UI
         [SerializeField] private Button playButton;
 
         [SerializeField] private Button closeWorkMiniGameButton;
-        [SerializeField] private Button closeRestMiniGameButton;
-        [SerializeField] private Button closePlayMiniGameButton;
 
         [SerializeField] private GameObject sleepPrefabs;
         [SerializeField] private GameObject playGamePrefabs;
@@ -29,8 +27,6 @@ namespace UI
             playButton.onClick.AddListener(DisplayPlayMiniGame);
             miniGameButton.onClick.AddListener(OnClick);
             closeWorkMiniGameButton.onClick.AddListener(CloseMiniGame);
-            closeRestMiniGameButton.onClick.AddListener(CloseMiniGame);
-            closePlayMiniGameButton.onClick.AddListener(CloseMiniGame);
             workPrefabs.SetActive(false);
             playGamePrefabs.SetActive(false);
             sleepPrefabs.SetActive(false);

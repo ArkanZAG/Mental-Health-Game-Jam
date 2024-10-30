@@ -1,8 +1,7 @@
-using System;
 using DefaultNamespace;
 using UnityEngine;
 
-namespace Controller
+namespace Controller.Trasportasi
 {
     public class TrainController : MonoBehaviour
     {
