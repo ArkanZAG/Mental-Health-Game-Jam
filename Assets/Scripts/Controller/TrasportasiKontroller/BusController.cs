@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace Controller.TrasportasiKontroller
 {
-    public class BusController : Transportasi.Transportasi
+    public class BusController : Transportasi.TransportationController
     {
         private int startHour;
-        [SerializeField] private int hourDuration;
         [SerializeField] private GameController gameController;
         [SerializeField] private SceneController sceneController;
         [SerializeField] private RandomEvent randomEvent;
@@ -20,12 +19,16 @@ namespace Controller.TrasportasiKontroller
 
         private void Update()
         {
-            if ((startHour + hourDuration) >= GameTime.Hours) return;
+            if (GetHourDuration() >= GameTime.Hours) return;
             GameTime.PauseState(true);
             if (!Input.GetKeyDown(KeyCode.Space)) return;
             sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
         }
 
-        public int HourDuration => hourDuration;
+        public int GetHourDuration()
+        {
+            return startHour + transportDuration;
+        }
+        
     }
 }

@@ -797,9 +797,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 299554246}
   foreground: {fileID: 357986400}
-  transportasi: {fileID: 0}
+  transportationController: {fileID: 2080414380}
   backgroundSpeed: 10
   foregroundSpeed: 5
+  noonBackground: {fileID: 0}
+  afterNoonBackground: {fileID: 0}
+  nightBackground: {fileID: 0}
   maxPosition: {fileID: 1808514443}
   backgroundElements:
   - {fileID: 129482406}
@@ -3517,7 +3520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f96d8307f8457994d146c95a7f529d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hourDuration: 4
+  transportDuration: 0
   gameController: {fileID: 651422607}
   sceneController: {fileID: 251418238}
   randomEvent: {fileID: 588989917}
