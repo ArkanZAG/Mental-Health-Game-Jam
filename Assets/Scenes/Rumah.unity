@@ -1130,6 +1130,7 @@ GameObject:
   - component: {fileID: 1003236819}
   - component: {fileID: 1003236818}
   - component: {fileID: 1003236822}
+  - component: {fileID: 1003236823}
   m_Layer: 5
   m_Name: =UI=
   m_TagString: Untagged
@@ -1215,6 +1216,7 @@ RectTransform:
   - {fileID: 1413869407}
   - {fileID: 1967047187}
   - {fileID: 1133967279}
+  - {fileID: 1990610131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1240,6 +1242,25 @@ MonoBehaviour:
   busSceneButton: {fileID: 1745834193}
   homeSceneUI: {fileID: 1967047186}
   reportCard: {fileID: 1413869406}
+  decisionUI: {fileID: 1990610130}
+--- !u!114 &1003236823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003236816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d264764b1c45cdbbc54b8ee5a36d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exhaustionText: {fileID: 1089207875}
+  stressText: {fileID: 1936370522}
+  moneyText: {fileID: 1224528762}
+  exhaustionDelta: {fileID: 276241473}
+  stressDelta: {fileID: 675475811}
+  moneyDelta: {fileID: 176787237}
 --- !u!1 &1047524088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,24 +1892,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4003740323465011429, guid: 02c2a27698068a044bd49225cce847f5, type: 3}
   m_PrefabInstance: {fileID: 2089017882574933677}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1413869408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413869406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41d264764b1c45cdbbc54b8ee5a36d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exhaustionText: {fileID: 1089207875}
-  stressText: {fileID: 1936370522}
-  moneyText: {fileID: 1224528762}
-  exhaustionDelta: {fileID: 276241473}
-  stressDelta: {fileID: 675475811}
-  moneyDelta: {fileID: 176787237}
 --- !u!1 &1624517163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2113,41 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7336498627179899980, guid: e75364565a6ac2d4aa79aaa7499f344d, type: 3}
   m_PrefabInstance: {fileID: 2665147}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1990610130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990610131}
+  m_Layer: 5
+  m_Name: DecisionUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1990610131
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990610130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1003236821}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2067248062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,10 +2842,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8354146895151073997, guid: 02c2a27698068a044bd49225cce847f5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1413869408}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02c2a27698068a044bd49225cce847f5, type: 3}
 --- !u!1001 &7766238180255073701
 PrefabInstance:
