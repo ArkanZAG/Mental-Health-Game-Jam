@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using DefaultNamespace;
 using Player.Stats;
 using RandomEvents;
@@ -36,8 +37,8 @@ namespace Controller
             if (GameTime.Hours <= 9)
             {
                 GameTime.SetGameTimeHours(9);
-                startWorkingHour = GameTime.Hours;
             }
+            startWorkingHour = GameTime.Hours;
             startWorkingStress = PlayerStatsController.Stress;
             startWorkingExhaustion = PlayerStatsController.Exhaustion;
             gameController.SetGameSpeed(100);
@@ -50,11 +51,8 @@ namespace Controller
 
         private void Update()
         {
-            if (isWorking == true)
-            {
-                stressTimer += Time.deltaTime;
-                AddStressPerMinutes();
-            }
+            stressTimer += Time.deltaTime;
+            AddStressPerMinutes();
             if (GameTime.Hours <= 17) return;
             kantorUi.Display(true);
             startWorkingScreen.SetActive(false);

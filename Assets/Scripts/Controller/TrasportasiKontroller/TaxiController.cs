@@ -24,8 +24,6 @@ namespace Controller.TrasportasiKontroller
         private void Update()
         {
             if ((GetHourDuration()) > GameTime.Hours) return;
-            GameTime.PauseState(true);
-            if (!Input.GetKeyDown(KeyCode.Space)) return;
             sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "Rumah");
         }
         
