@@ -2,14 +2,22 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private int playerMovementSpeed;
     [SerializeField] private Rigidbody playerRigidBody;
+    [FormerlySerializedAs("defaultScale")] [SerializeField] private Vector3 originalScale;
     
     [SerializeField] private Animator anim;
 
+    
+
+    private void Start()
+    {
+        originalScale = this.transform.localScale;
+    }
     private void Movement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -19,10 +27,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalInput >= 0.1f)
         {
-            transform.localScale = Vector3.one;
+            var playerScaleRight = originalScale;
+            playerScaleRight.x *= 1;
+            transform.localScale = playerScaleRight;
         }else if (horizontalInput <= -0.1f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            var playerScaleLeft = originalScale;
+            playerScaleLeft.x *= -1;
+            transform.localScale = playerScaleLeft;
         }
         
         if (verticalInput != 0 || horizontalInput != 0)
@@ -36,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
         
         
     }
-
     private void Update()
     {
         Movement();
