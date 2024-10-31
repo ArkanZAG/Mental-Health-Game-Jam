@@ -24,17 +24,6 @@ namespace UI
             trainSceneButton.onClick.AddListener(ChangeSceneTrain);
             busSceneButton.onClick.AddListener(ChangeSceneBus);
             reportCard.SetActive(true);
-            
-
-            if (GameTime.Hours == 7)
-            {
-                decisionUI.SetActive(true);
-                GameTime.PauseState(true);
-            }
-            else
-            {
-                decisionUI.SetActive(false);
-            }
         }
         private void ChangeSceneTaxi()
         {
@@ -58,6 +47,15 @@ namespace UI
         private void Update()
         {
             Display();
+            if (GameTime.Hours == 7)
+            {
+                decisionUI.SetActive(true);
+                GameTime.PauseState(true);
+            }
+            else
+            {
+                decisionUI.SetActive(false);
+            }
         }
 
         private void Awake()
