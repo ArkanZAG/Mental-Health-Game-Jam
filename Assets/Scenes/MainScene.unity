@@ -159,6 +159,7 @@ MonoBehaviour:
   trainSceneButton: {fileID: 673474479}
   busSceneButton: {fileID: 1793407036}
   homeSceneUI: {fileID: 1325107574}
+  reportCard: {fileID: 0}
 --- !u!114 &18958052
 MonoBehaviour:
   m_ObjectHideFlags: 0

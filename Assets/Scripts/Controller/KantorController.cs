@@ -3,6 +3,7 @@ using DefaultNamespace;
 using Player.Stats;
 using RandomEvents;
 using UI;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Controller
@@ -13,8 +14,9 @@ namespace Controller
         [SerializeField] private SceneController sceneController;
         [SerializeField] private RandomEvent randomEvent;
 
+        [SerializeField] private GameObject startWorkingScreen;
+
         [SerializeField] private KantorUI kantorUi;
-        [SerializeField] private GameObject startScreen;
 
         private bool isWorking;
         private bool isPaid;
@@ -38,21 +40,16 @@ namespace Controller
             }
             startWorkingStress = PlayerStatsController.Stress;
             startWorkingExhaustion = PlayerStatsController.Exhaustion;
+            gameController.SetGameSpeed(100);
             WorkPerformance();
-            startScreen.SetActive(true);
             kantorUi.Display(false);
+            startWorkingScreen.SetActive(true);
+            isWorking = true;
             isPaid = false;
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GameTime.PauseState(false);
-                gameController.SetGameSpeed(100f);
-                startScreen.SetActive(false);
-                isWorking = true;
-            }
             if (isWorking == true)
             {
                 stressTimer += Time.deltaTime;
@@ -60,6 +57,7 @@ namespace Controller
             }
             if (GameTime.Hours <= 17) return;
             kantorUi.Display(true);
+            startWorkingScreen.SetActive(false);
             isWorking = false;
             GameTime.PauseState(true);
             WorkingState.SetWorkingState(true);
