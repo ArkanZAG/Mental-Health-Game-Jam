@@ -2043,15 +2043,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312704012218156373, guid: 9a298f75dc0fba672921bbf8caa23d40, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -20.24768
       objectReference: {fileID: 0}
     - target: {fileID: 2229622827009336734, guid: 9a298f75dc0fba672921bbf8caa23d40, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 950
       objectReference: {fileID: 0}
     - target: {fileID: 4008114591318006106, guid: 9a298f75dc0fba672921bbf8caa23d40, type: 3}
       propertyPath: m_Name
       value: Work Minigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008114591318006106, guid: 9a298f75dc0fba672921bbf8caa23d40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7871310875187665642, guid: 9a298f75dc0fba672921bbf8caa23d40, type: 3}
       propertyPath: m_Pivot.x
@@ -3923,7 +3927,9 @@ MonoBehaviour:
   gameController: {fileID: 651422607}
   sceneController: {fileID: 251418238}
   randomEvent: {fileID: 588989917}
+  arriveUI: {fileID: 0}
   exitDoor: {fileID: 0}
+  backGround: []
 --- !u!1 &2089768598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8453415240942984089, guid: 1d5226f22bf960b4580b747b37a91b85, type: 3}
