@@ -16,6 +16,7 @@ namespace Controller.TrasportasiKontroller
         [SerializeField] private GameObject arriveUI;
         [SerializeField] private GameObject exitDoor;
         [SerializeField] private GameObject colliderPintu;
+        [SerializeField] private GameObject minigame;
 
         [SerializeField] private GameObject backgroundSiang;
         [SerializeField] private GameObject backgroundMalam;
@@ -46,6 +47,7 @@ namespace Controller.TrasportasiKontroller
         {
             if (GetHourDuration() >= GameTime.Hours) return;
             arriveUI.SetActive(true);
+            minigame.SetActive(false);
             colliderPintu.SetActive(false);
             exitDoor.SetActive(true);
             GameTime.PauseState(true);
