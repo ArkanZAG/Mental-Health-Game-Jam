@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneSelection: Rumah
-  SceneDelay: 5
+  SceneDelay: 10
 --- !u!4 &1626726578
 Transform:
   m_ObjectHideFlags: 0
