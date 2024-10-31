@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DefaultNamespace;
+using Player.Stats;
 using RandomEvents;
 using UnityEngine;
 
@@ -27,6 +28,8 @@ namespace Controller.TrasportasiKontroller
             exitDoor.SetActive(false);
             exitDoor.SetActive(false);
             colliderPintu.SetActive(true);
+            PlayerStatsController.SetExhaustionPerSecond(0.05f);
+            PlayerStatsController.SetStressPerSecond(0.05f);
             if (GameTime.Hours <= 15)
             {
                 backgroundSiang.SetActive(true);

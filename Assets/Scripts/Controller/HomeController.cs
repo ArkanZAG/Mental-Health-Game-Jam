@@ -23,6 +23,9 @@ public class HomeController : MonoBehaviour
     {
         WorkingState.SetWorkingState(false);
         GameTime.PauseState(false);
+        PlayerStatsController.SaveInitialStats();
+        PlayerStatsController.SetExhaustionPerSecond(0f);
+        PlayerStatsController.SetStressPerSecond(0f);
         if (GameTime.DayCount > 1)
         {
             arriveHomeTime = GameTime.Hours;

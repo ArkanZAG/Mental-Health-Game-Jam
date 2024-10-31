@@ -15,12 +15,21 @@ namespace UI
         [SerializeField] private Button busSceneButton;
     
         [SerializeField] private GameObject homeSceneUI;
+        [SerializeField] private GameObject reportCard;
 
         private void Start()
         {
             taxiSceneButton.onClick.AddListener(ChangeSceneTaxi);
             trainSceneButton.onClick.AddListener(ChangeSceneTrain);
             busSceneButton.onClick.AddListener(ChangeSceneBus);
+            if (GameTime.DayCount > 1)
+            {
+                reportCard.SetActive(false);
+            }
+            else
+            {
+                reportCard.SetActive(true);
+            }
         }
         private void ChangeSceneTaxi()
         {
