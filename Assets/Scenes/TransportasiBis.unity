@@ -818,7 +818,7 @@ MonoBehaviour:
   afterNoonBackground: {fileID: 1645547}
   nightBackground: {fileID: 2089768598}
   maxPosition: {fileID: 1808514443}
-  backgroundElements:
+  foregroundElements:
   - {fileID: 129482406}
   - {fileID: 2066232109}
   - {fileID: 1148809959}
