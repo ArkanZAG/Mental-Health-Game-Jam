@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Controller.TrasportasiKontroller
 {
@@ -12,6 +13,9 @@ namespace Controller.TrasportasiKontroller
         [SerializeField] private GameObject arriveUI;
         [SerializeField] private GameObject exitDoor;
         [SerializeField] private GameObject colliderPintu;
+        [SerializeField] private GameObject minigame;
+
+        [SerializeField] private Button miniGameButton;
 
         [SerializeField] private GameObject backGroundSiang;
         [SerializeField] private GameObject backgroundMalem;
@@ -23,6 +27,7 @@ namespace Controller.TrasportasiKontroller
             arriveUI.SetActive(false);
             exitDoor.SetActive(false);
             colliderPintu.SetActive(true);
+            miniGameButton.interactable = true;
             if (GameTime.Hours <= 15 )
             {
                 backGroundSiang.SetActive(true);
@@ -40,6 +45,9 @@ namespace Controller.TrasportasiKontroller
             if (GetHourDuration() > GameTime.Hours) return;
             arriveUI.SetActive(true);
             exitDoor.SetActive(true);
+            miniGameButton.interactable = false;
+            GameTime.PauseState(true);
+            minigame.SetActive(false);
             colliderPintu.SetActive(false);
             gameController.SetGameSpeed(0f);
         }

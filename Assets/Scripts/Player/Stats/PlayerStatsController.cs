@@ -8,6 +8,17 @@ namespace Player.Stats
         public static float Exhaustion => _playerStats.exhaustion;
         public static float Stress => _playerStats.stress;
         public static float Money => _playerStats.money;
+        
+        public static float initialExhaustion { get; private set; }
+        public static float initialStress { get; private set; }
+        public static float initialMoney { get; private set; }
+
+        public static void SaveInitialStats()
+        {
+            initialExhaustion = _playerStats.exhaustion;
+            initialStress = _playerStats.stress;
+            initialMoney = _playerStats.money;
+        }
 
         public static void SetExhaustionPerSecond(float value)
         {

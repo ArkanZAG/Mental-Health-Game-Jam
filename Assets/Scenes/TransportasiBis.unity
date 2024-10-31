@@ -1143,11 +1143,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 660476ce2f1b136479d0cf96b393599f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1599,6 +1599,11 @@ PrefabInstance:
       addedObject: {fileID: 2123984259}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+--- !u!1 &535430958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8855703435525308866, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+  m_PrefabInstance: {fileID: 535430957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &535430959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4059690893075944597, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
@@ -1824,7 +1829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158b4f88b2d07ae45969793c14b488bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 1
+  gameSpeed: 100
 --- !u!4 &651422608
 Transform:
   m_ObjectHideFlags: 0
@@ -3201,6 +3206,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
+--- !u!114 &1493463243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4556990798592309898, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
+  m_PrefabInstance: {fileID: 1493463242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1537164233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3288,14 +3304,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1820603592}
     m_Modifications:
-    - target: {fileID: 4238377683871804718, guid: 42e560b324ae76048b75166b5f6ecdbf, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 418
-      objectReference: {fileID: 0}
-    - target: {fileID: 4238377683871804718, guid: 42e560b324ae76048b75166b5f6ecdbf, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 372
-      objectReference: {fileID: 0}
     - target: {fileID: 6729032568202796675, guid: 42e560b324ae76048b75166b5f6ecdbf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4114,6 +4122,8 @@ MonoBehaviour:
   arriveUI: {fileID: 1567132084}
   exitDoor: {fileID: 2117650093}
   colliderPintu: {fileID: 1231462575}
+  minigame: {fileID: 535430958}
+  miniGameButton: {fileID: 1493463243}
   backgroundSiang: {fileID: 1542190660}
   backgroundMalam: {fileID: 2089768598}
 --- !u!1 &2089768598 stripped

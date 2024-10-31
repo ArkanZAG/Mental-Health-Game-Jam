@@ -14,7 +14,7 @@ namespace DefaultNamespace
         {
             if (other.CompareTag("Player") && gameObject.CompareTag("ExitDoor"))
             {
-                sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
+                sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "Rumah");
             }
         }
     }

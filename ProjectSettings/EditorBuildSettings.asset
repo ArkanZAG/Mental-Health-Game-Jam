@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneKantor.unity
     guid: dbb3391afe0e97346943cda23b9a67c7
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 29caed18335e5a24ebdd8a0c68f90faf
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: cc14106636577cd468158aaf9f240763
   m_configObjects: {}

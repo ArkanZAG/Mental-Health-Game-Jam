@@ -15,12 +15,15 @@ namespace UI
         [SerializeField] private Button busSceneButton;
     
         [SerializeField] private GameObject homeSceneUI;
+        [SerializeField] private GameObject reportCard;
+        [SerializeField] private GameObject decisionUI;
 
         private void Start()
         {
             taxiSceneButton.onClick.AddListener(ChangeSceneTaxi);
             trainSceneButton.onClick.AddListener(ChangeSceneTrain);
             busSceneButton.onClick.AddListener(ChangeSceneBus);
+            reportCard.SetActive(true);
         }
         private void ChangeSceneTaxi()
         {
@@ -44,6 +47,15 @@ namespace UI
         private void Update()
         {
             Display();
+            if (GameTime.Hours == 7)
+            {
+                decisionUI.SetActive(true);
+                GameTime.PauseState(true);
+            }
+            else
+            {
+                decisionUI.SetActive(false);
+            }
         }
 
         private void Awake()
@@ -58,10 +70,12 @@ namespace UI
 
         public void Display()
         {
+            if (GameTime.DayCount >= 7) return;
             if (GameTime.Hours < 5 || GameTime.Hours >= 18) return;
             homeSceneUI.SetActive(true);
             GameTime.PauseState(true);
             PlayerStatsController.SetExhaustionPerSecond(0f);
+
         }
     }
 }

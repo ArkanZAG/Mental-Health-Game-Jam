@@ -498,4 +498,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b47be6a7924cbab72a63634fb3d727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stressSlider: {fileID: 0}
+  stressSlider: {fileID: 3831222684968701782}
+  money: 0
