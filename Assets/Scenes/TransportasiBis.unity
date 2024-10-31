@@ -1599,6 +1599,11 @@ PrefabInstance:
       addedObject: {fileID: 2123984259}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+--- !u!1 &535430958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8855703435525308866, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+  m_PrefabInstance: {fileID: 535430957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &535430959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4059690893075944597, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
@@ -3264,6 +3269,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
+--- !u!114 &1493463243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4556990798592309898, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
+  m_PrefabInstance: {fileID: 1493463242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1537164233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4191,6 +4207,8 @@ MonoBehaviour:
   arriveUI: {fileID: 1567132084}
   exitDoor: {fileID: 2117650093}
   colliderPintu: {fileID: 1231462575}
+  minigame: {fileID: 535430958}
+  miniGameButton: {fileID: 1493463243}
   backgroundSiang: {fileID: 1542190660}
   backgroundMalam: {fileID: 2089768598}
 --- !u!1 &2089768598 stripped

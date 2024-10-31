@@ -4,6 +4,7 @@ using DefaultNamespace;
 using Player.Stats;
 using RandomEvents;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Controller.TrasportasiKontroller
 {
@@ -18,6 +19,8 @@ namespace Controller.TrasportasiKontroller
         [SerializeField] private GameObject colliderPintu;
         [SerializeField] private GameObject minigame;
 
+        [SerializeField] private Button miniGameButton;
+        
         [SerializeField] private GameObject backgroundSiang;
         [SerializeField] private GameObject backgroundMalam;
         private void Awake()
@@ -26,6 +29,7 @@ namespace Controller.TrasportasiKontroller
             randomEvent.DoEvent();
             GameTime.PauseState(false);
             arriveUI.SetActive(false);
+            miniGameButton.interactable = true;
             exitDoor.SetActive(false);
             exitDoor.SetActive(false);
             colliderPintu.SetActive(true);
@@ -48,6 +52,7 @@ namespace Controller.TrasportasiKontroller
             if (GetHourDuration() >= GameTime.Hours) return;
             arriveUI.SetActive(true);
             minigame.SetActive(false);
+            miniGameButton.interactable = false;
             colliderPintu.SetActive(false);
             exitDoor.SetActive(true);
             GameTime.PauseState(true);

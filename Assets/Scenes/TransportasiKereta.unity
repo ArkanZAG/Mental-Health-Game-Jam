@@ -1458,6 +1458,8 @@ MonoBehaviour:
   arriveUI: {fileID: 220154924}
   exitDoor: {fileID: 359642841}
   colliderPintu: {fileID: 689511655}
+  minigame: {fileID: 1780367016}
+  miniGameButton: {fileID: 709242358}
   backGroundSiang: {fileID: 174986831}
   backgroundMalem: {fileID: 63201095}
 --- !u!1001 &709242356
@@ -1619,6 +1621,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7861183567956543544, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
   m_PrefabInstance: {fileID: 709242356}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &709242358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4556990798592309898, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
+  m_PrefabInstance: {fileID: 709242356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745947206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4199,6 +4212,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+--- !u!1 &1780367016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8855703435525308866, guid: c70449236af17544c9c1e32ffe9c53d3, type: 3}
+  m_PrefabInstance: {fileID: 1780367015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821471859
 GameObject:
   m_ObjectHideFlags: 0
