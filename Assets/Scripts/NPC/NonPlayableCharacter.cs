@@ -7,15 +7,22 @@ namespace NPC
 {
     public class NonPlayableCharacter : MonoBehaviour
     {
+        private bool isColliderColliding;
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.CompareTag("Player") && !isColliderColliding)
             {
-                PlayerStatsController.SetExhaustionPerSecond(1f);
+                PlayerStatsController.AddStressPerSecond(1f);
+                isColliderColliding = true;
             }
-            else
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player") && isColliderColliding)
             {
-                
+                PlayerStatsController.AddStressPerSecond(0f);
+                isColliderColliding = false;
             }
         }
     }

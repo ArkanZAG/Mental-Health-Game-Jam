@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4737793971910360129}
   - component: {fileID: 379228760246113392}
   - component: {fileID: 7804962762667280593}
+  - component: {fileID: 2844646580408377358}
   m_Layer: 0
   m_Name: NPCC
   m_TagString: Untagged
@@ -97,3 +98,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f618211a47495e97253d8e713c4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2844646580408377358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7350773417611621215}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 0.2}
+  m_Center: {x: 0, y: -1.6, z: 0}

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DefaultNamespace;
 using RandomEvents;
 using UnityEngine;
@@ -11,19 +12,23 @@ namespace Controller.TrasportasiKontroller
         [SerializeField] private GameController gameController;
         [SerializeField] private SceneController sceneController;
         [SerializeField] private RandomEvent randomEvent;
-
+        [SerializeField] private GameObject arriveUI;
         [SerializeField] private GameObject exitDoor;
+
+        [SerializeField] private List<GameObject> backGround;
         private void Awake()
         {
             startHour = GameTime.Hours;
             randomEvent.DoEvent();
             GameTime.PauseState(false);
+            arriveUI.SetActive(false);
             exitDoor.SetActive(false);
         }
 
         private void Update()
         {
             if (GetHourDuration() >= GameTime.Hours) return;
+            arriveUI.SetActive(true);
             exitDoor.SetActive(true);
             GameTime.PauseState(true);
             
@@ -32,14 +37,6 @@ namespace Controller.TrasportasiKontroller
         public int GetHourDuration()
         {
             return startHour + transportDuration;
-        }
-
-        public void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Player") && gameObject.CompareTag("ExitDoor"))
-            {
-                sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
-            }
         }
     }
 }

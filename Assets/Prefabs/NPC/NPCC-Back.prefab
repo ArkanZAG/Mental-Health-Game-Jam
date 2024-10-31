@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 582226318695172246}
   - component: {fileID: 338237676821148511}
   - component: {fileID: 7869905941418698074}
+  - component: {fileID: 7717120281969519817}
   m_Layer: 0
   m_Name: NPCC-Back
   m_TagString: Untagged
@@ -97,3 +98,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f618211a47495e97253d8e713c4810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7717120281969519817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921341521190765637}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 0.2}
+  m_Center: {x: 0.45, y: 2, z: 0}

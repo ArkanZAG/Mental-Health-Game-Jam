@@ -7,8 +7,8 @@ namespace Background
 {
     public class Background : MonoBehaviour
     {
-        [FormerlySerializedAs("sforeground")] [FormerlySerializedAs("foreground")] [SerializeField] private GameObject background;
-        [FormerlySerializedAs("background")] [SerializeField] private GameObject foreground;
+        [SerializeField] private GameObject background;
+        [SerializeField] private GameObject foreground;
         [SerializeField] private TransportationController transportasi;
         [SerializeField] private int foregroundSpeed;
         [SerializeField] private float backgroundSpeed;
@@ -19,7 +19,7 @@ namespace Background
 
         [SerializeField] private Transform maxPosition;
 
-        [FormerlySerializedAs("backgroundElements")] [SerializeField] private List<GameObject> foregroundElements;
+        [SerializeField] private List<GameObject> foregroundElements;
         
     
         void Update()
