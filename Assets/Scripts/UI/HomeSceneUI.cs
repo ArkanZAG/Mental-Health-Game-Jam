@@ -16,6 +16,7 @@ namespace UI
     
         [SerializeField] private GameObject homeSceneUI;
         [SerializeField] private GameObject reportCard;
+        [SerializeField] private GameObject decisionUI;
 
         private void Start()
         {
@@ -29,6 +30,11 @@ namespace UI
             else
             {
                 reportCard.SetActive(true);
+            }
+
+            if (GameTime.Hours == 7)
+            {
+                decisionUI.SetActive(true);
             }
         }
         private void ChangeSceneTaxi()
@@ -67,10 +73,12 @@ namespace UI
 
         public void Display()
         {
+            if (GameTime.DayCount >= 7) return;
             if (GameTime.Hours < 5 || GameTime.Hours >= 18) return;
             homeSceneUI.SetActive(true);
             GameTime.PauseState(true);
             PlayerStatsController.SetExhaustionPerSecond(0f);
+
         }
     }
 }

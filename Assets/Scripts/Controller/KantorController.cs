@@ -30,8 +30,6 @@ namespace Controller
         private float startWorkingStress;
         private float startWorkingExhaustion;
 
-        private float miniGameFinished;
-
         private void Start()
         {
             if (GameTime.Hours <= 9)
@@ -42,6 +40,7 @@ namespace Controller
             startWorkingStress = PlayerStatsController.Stress;
             startWorkingExhaustion = PlayerStatsController.Exhaustion;
             gameController.SetGameSpeed(100);
+            GameTime.PauseState(false);
             WorkPerformance();
             kantorUi.Display(false);
             startWorkingScreen.SetActive(true);

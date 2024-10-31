@@ -46,6 +46,7 @@ namespace Controller.TrasportasiKontroller
             arriveUI.SetActive(true);
             exitDoor.SetActive(true);
             miniGameButton.interactable = false;
+            GameTime.PauseState(true);
             minigame.SetActive(false);
             colliderPintu.SetActive(false);
             gameController.SetGameSpeed(0f);
