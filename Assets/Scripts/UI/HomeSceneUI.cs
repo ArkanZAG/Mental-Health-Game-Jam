@@ -29,6 +29,7 @@ namespace UI
             if (GameTime.Hours == 7)
             {
                 decisionUI.SetActive(true);
+                GameTime.PauseState(true);
             }
         }
         private void ChangeSceneTaxi()
