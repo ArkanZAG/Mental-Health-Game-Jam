@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 195}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 10, y: 440}
+  m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176825243
 MonoBehaviour:
@@ -180,7 +180,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hello,\nYour rent is due for three months. If you delay payment any further,
-    you will be evicted. \n\n-Landlord"
+    you will be evicted. \n\nAlso, I've heard reports of foul smell coming from your
+    room, please take care of it, or if it's a plumbing problem, call me.\n-Landlord"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad51811dc163123458ebb622ca71291e, type: 2}
   m_sharedMaterial: {fileID: 9046241583596742227, guid: ad51811dc163123458ebb622ca71291e, type: 2}
@@ -207,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -217,11 +218,11 @@ MonoBehaviour:
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: -2
+  m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: -16
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 5.26
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.6

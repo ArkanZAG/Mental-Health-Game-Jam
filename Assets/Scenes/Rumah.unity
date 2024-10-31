@@ -348,8 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb8c8bc1094bf34f9df0f77aab5ace6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 116264076}
-  transportasionType: 1
 --- !u!114 &116264076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,8 +566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb8c8bc1094bf34f9df0f77aab5ace6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 132888660}
-  transportasionType: 0
 --- !u!114 &132888660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,8 +1021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb8c8bc1094bf34f9df0f77aab5ace6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 444847312}
-  transportasionType: 2
 --- !u!114 &444847312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1471,7 +1465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4139813785457819929, guid: 9d5df9a84b2e9e443afa8175656f7e94, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 4139813785457819929, guid: 9d5df9a84b2e9e443afa8175656f7e94, type: 3}
       propertyPath: m_LocalPosition.y
