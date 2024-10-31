@@ -2582,7 +2582,7 @@ GameObject:
   - component: {fileID: 1796305257}
   - component: {fileID: 1796305256}
   m_Layer: 5
-  m_Name: Button
+  m_Name: NoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2703,7 +2703,7 @@ GameObject:
   - component: {fileID: 1879642995}
   - component: {fileID: 1879642994}
   m_Layer: 5
-  m_Name: Button
+  m_Name: YesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3109,6 +3109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1990610131}
+  - component: {fileID: 1990610132}
   m_Layer: 5
   m_Name: DecisionUI
   m_TagString: Untagged
@@ -3141,6 +3142,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1990610132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990610130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e45bdaea96c4cba8e64ca7191cef657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yesButton: {fileID: 1879642994}
+  noButton: {fileID: 1796305256}
+  sceneController: {fileID: 1256973490}
 --- !u!1 &2067248062
 GameObject:
   m_ObjectHideFlags: 0

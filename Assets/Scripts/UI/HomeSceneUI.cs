@@ -31,6 +31,10 @@ namespace UI
                 decisionUI.SetActive(true);
                 GameTime.PauseState(true);
             }
+            else
+            {
+                decisionUI.SetActive(false);
+            }
         }
         private void ChangeSceneTaxi()
         {
