@@ -1132,7 +1132,6 @@ GameObject:
   - component: {fileID: 1003236820}
   - component: {fileID: 1003236819}
   - component: {fileID: 1003236818}
-  - component: {fileID: 1003236817}
   m_Layer: 5
   m_Name: =UI=
   m_TagString: Untagged
@@ -1140,24 +1139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1003236817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003236816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56199704d4dbe434db7c354c1ace911a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneController: {fileID: 1256973490}
-  taxiSceneButton: {fileID: 2081270958}
-  trainSceneButton: {fileID: 1722195234}
-  busSceneButton: {fileID: 1745834193}
-  homeSceneUI: {fileID: 1967047186}
-  reportCard: {fileID: 0}
 --- !u!114 &1003236818
 MonoBehaviour:
   m_ObjectHideFlags: 0
