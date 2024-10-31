@@ -24,7 +24,7 @@ public class EscInputHandler : MonoBehaviour
         PlayerStatsController.SetExhaustionPerSecond(0.05f);
         PlayerStatsController.SetStressPerSecond(0f);
         
-        yield return new WaitForSeconds(0.0001f);
+        yield return new WaitForSeconds(0.01f);
 
         gameObject.SetActive(false);
     }

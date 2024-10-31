@@ -30,6 +30,12 @@ public class UI_IdleMinigame : MonoBehaviour
         CheckCoin();
     }
 
+    private void OnDisable()
+    {
+        PlayerStatsController.SetExhaustionPerSecond(0.05f);
+        PlayerStatsController.SetStressPerSecond(0f);
+    }
+
     private void CheckCoin() {
         if (PlayerStatsController.GetIdleGameCoin() < 100000) {
             _buyInvestmentButton.interactable = false;
