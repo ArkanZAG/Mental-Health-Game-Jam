@@ -9,7 +9,9 @@ namespace Controller.TrasportasiKontroller
         private int startHour;
         [SerializeField] private RandomEvent randomEvent;
         [SerializeField] private SceneController sceneController;
-        [SerializeField] private GameObject arriveUI;
+
+        [SerializeField] private GameObject backgroundSiang;
+        [SerializeField] private GameObject backgroundMalam;
         
         private void Awake()
         {
@@ -17,16 +19,14 @@ namespace Controller.TrasportasiKontroller
             startHour = GameTime.Hours;
             randomEvent.DoEvent();
             GameTime.PauseState(false);
-            arriveUI.SetActive(false);
         }
         
         private void Update()
         {
             if ((GetHourDuration()) > GameTime.Hours) return;
             GameTime.PauseState(true);
-            arriveUI.SetActive(true);
             if (!Input.GetKeyDown(KeyCode.Space)) return;
-            sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
+            sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "Rumah");
         }
         
         public int GetHourDuration()
