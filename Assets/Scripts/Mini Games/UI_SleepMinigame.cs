@@ -87,4 +87,10 @@ public class UI_SleepMinigame : MonoBehaviour
             _buttonAnimator.SetTrigger("Down");
         }
     }
+
+    private void OnDisable()
+    {
+        PlayerStatsController.SetExhaustionPerSecond(0.05f);
+        PlayerStatsController.SetStressPerSecond(0f);
+    }
 }

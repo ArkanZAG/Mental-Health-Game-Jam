@@ -2634,17 +2634,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 763022995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1328590850 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6883881102411406175, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-  m_PrefabInstance: {fileID: 1493463242}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1334606997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,62 +3105,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1820603592}
     m_Modifications:
-    - target: {fileID: 1109196312984395698, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: workPrefabs
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: sleepPrefabs
-      value: 
-      objectReference: {fileID: 535430963}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: playGamePrefabs
-      value: 
-      objectReference: {fileID: 535430959}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: closePlayMiniGameButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: closeRestMiniGameButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: closeWorkMiniGameButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: miniGameObjects.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: miniGamePrefabs.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: miniGameObjects.Array.data[0].button
-      value: 
-      objectReference: {fileID: 1328590850}
     - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
       propertyPath: miniGameObjects.Array.data[0].prefab
       value: 
       objectReference: {fileID: 1409688364}
     - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: miniGameObjects.Array.data[1].button
-      value: 
-      objectReference: {fileID: 1602303646}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
       propertyPath: miniGameObjects.Array.data[1].prefab
       value: 
       objectReference: {fileID: 535430963}
-    - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: miniGameObjects.Array.data[2].button
-      value: 
-      objectReference: {fileID: 1948317897}
     - target: {fileID: 2863400450729813888, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
       propertyPath: miniGameObjects.Array.data[2].prefab
       value: 
@@ -3259,10 +3200,6 @@ PrefabInstance:
     - target: {fileID: 9142934187641720294, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
       propertyPath: m_Name
       value: MiniGameUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142934187641720294, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3471,17 +3408,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8131596983282195720, guid: 21357f2590d8fa243aa727c44f4974ce, type: 3}
   m_PrefabInstance: {fileID: 1478474634}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1602303646 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 313232946343625286, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-  m_PrefabInstance: {fileID: 1493463242}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1603520819 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 653457621413579802, guid: 9d5df9a84b2e9e443afa8175656f7e94, type: 3}
@@ -4015,17 +3941,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2976763680398244076, guid: bdf835a6c14df71459688f3baa898dcd, type: 3}
   m_PrefabInstance: {fileID: 1937893451}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1948317897 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7987059377800700925, guid: dd86e505634d2aa43833d41e4ac06995, type: 3}
-  m_PrefabInstance: {fileID: 1493463242}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1964300585
 GameObject:
   m_ObjectHideFlags: 0

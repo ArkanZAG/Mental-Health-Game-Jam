@@ -58,6 +58,12 @@ public class UI_WorkMinigame : MonoBehaviour
         SpaceKeyInputHandler();
     }
 
+    private void OnDisable()
+    {
+        PlayerStatsController.SetExhaustionPerSecond(0.05f);
+        PlayerStatsController.SetStressPerSecond(0f);
+    }
+
     private IEnumerator WaitThreeSeconds() {
         Debug.Log("Start waiting at " + Time.time);
 

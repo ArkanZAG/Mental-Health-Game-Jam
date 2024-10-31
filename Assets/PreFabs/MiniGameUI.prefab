@@ -1077,17 +1077,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miniGameButton: {fileID: 4556990798592309898}
   miniGameHolder: {fileID: 1109196312984395698}
-  workButton: {fileID: 6883881102411406175}
-  restButton: {fileID: 313232946343625286}
-  playButton: {fileID: 7987059377800700925}
-  closeWorkMiniGameButton: {fileID: 0}
-  sleepPrefabs: {fileID: 0}
-  playGamePrefabs: {fileID: 0}
-  workPrefabs: {fileID: 0}
-  miniGamePrefabs:
-  - prefab: {fileID: 4008114591318006106, guid: 9a298f75dc0fba672921bbf8caa23d40, type: 3}
+  miniGameObjects:
+  - prefab: {fileID: 0}
     button: {fileID: 6883881102411406175}
-  - prefab: {fileID: 7084975354678468391, guid: 89482177e5bd01d4f82ad83faf4ef012, type: 3}
+  - prefab: {fileID: 0}
     button: {fileID: 313232946343625286}
-  - prefab: {fileID: 6641948241682918337, guid: 84edf85b0a4dbdd4a98313d4829aca90, type: 3}
+  - prefab: {fileID: 0}
     button: {fileID: 7987059377800700925}
