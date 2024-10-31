@@ -21,6 +21,7 @@ public class HomeController : MonoBehaviour
     
     void Start()
     {
+        gameController.SetGameSpeed(100f);
         WorkingState.SetWorkingState(false);
         GameTime.PauseState(false);
         PlayerStatsController.SaveInitialStats();
