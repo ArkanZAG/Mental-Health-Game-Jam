@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad10bfc6d5c2594d93e78af892fd684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneSelection: TransportasiBis
+  SceneSelection: MainScene
   SceneDelay: 4
 --- !u!4 &1626726578
 Transform:

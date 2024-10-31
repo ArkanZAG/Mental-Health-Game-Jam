@@ -7,7 +7,6 @@ namespace Controller
     {
         [SerializeField] private float gameSpeed = 1;
         
-    
         void Update()
         {
             GameTime.Update(Time.deltaTime * gameSpeed);
@@ -16,7 +15,6 @@ namespace Controller
             Debug.Log("Jam : " + GameTime.Hours + ", Menit : " + GameTime.Minutes + ", Exhaustion : " +
                       PlayerStatsController.Exhaustion + ", Day : " + GameTime.DayCount + ", Money : " +
                 PlayerStatsController.Money);
-            //PlayerStatsController.AddStress(0.05f);
         }
         public void SetGameSpeed(float value)
         {

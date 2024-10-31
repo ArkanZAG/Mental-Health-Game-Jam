@@ -67,8 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You have arrive at your destination
 
-    Pllease move the the door to
-    proceed'
+    Please move the the door to proceed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad51811dc163123458ebb622ca71291e, type: 2}
   m_sharedMaterial: {fileID: 9046241583596742227, guid: ad51811dc163123458ebb622ca71291e, type: 2}

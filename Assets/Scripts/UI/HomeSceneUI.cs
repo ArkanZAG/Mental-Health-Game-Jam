@@ -24,16 +24,19 @@ namespace UI
         }
         private void ChangeSceneTaxi()
         {
+            if (!(PlayerStatsController.Money >= 150)) return;
             PlayerStatsController.AddMoney(-150);
             sceneController.ChangeScene("TransportasiTaxi");
         }
         private void ChangeSceneTrain()
         {
+            if (!(PlayerStatsController.Money >= 100)) return;
             PlayerStatsController.AddMoney(-100);
             sceneController.ChangeScene("TransportasiKereta");
         }
         private void ChangeSceneBus()
         {
+            if (!(PlayerStatsController.Money >= 50)) return;
             PlayerStatsController.AddMoney(-50);
             sceneController.ChangeScene("TransportasiBis");
         }
