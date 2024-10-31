@@ -11,19 +11,22 @@ namespace Controller.TrasportasiKontroller
         [SerializeField] private GameController gameController;
         [SerializeField] private SceneController sceneController;
         [SerializeField] private RandomEvent randomEvent;
+
+        [SerializeField] private GameObject exitDoor;
         private void Awake()
         {
             startHour = GameTime.Hours;
             randomEvent.DoEvent();
             GameTime.PauseState(false);
+            exitDoor.SetActive(false);
         }
 
         private void Update()
         {
             if (GetHourDuration() >= GameTime.Hours) return;
+            exitDoor.SetActive(true);
             GameTime.PauseState(true);
-            if (!Input.GetKeyDown(KeyCode.Space)) return;
-            sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
+            
         }
 
         public int GetHourDuration()
@@ -33,7 +36,10 @@ namespace Controller.TrasportasiKontroller
 
         public void OnTriggerEnter(Collider other)
         {
-            
+            if (other.CompareTag("Player") && gameObject.CompareTag("ExitDoor"))
+            {
+                sceneController.ChangeScene(WorkingState.GetWorkingState() == false ? "SceneKantor" : "MainScene");
+            }
         }
     }
 }
