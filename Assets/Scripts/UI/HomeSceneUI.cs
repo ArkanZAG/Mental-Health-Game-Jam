@@ -23,7 +23,7 @@ namespace UI
             taxiSceneButton.onClick.AddListener(ChangeSceneTaxi);
             trainSceneButton.onClick.AddListener(ChangeSceneTrain);
             busSceneButton.onClick.AddListener(ChangeSceneBus);
-            if (GameTime.DayCount > 1)
+            if (GameTime.DayCount >= 1)
             {
                 reportCard.SetActive(false);
             }
