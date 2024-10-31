@@ -45,11 +45,11 @@ public class CoinPool : MonoBehaviour
         var leftVector = new Vector2(-50, -25);
         var rightVector = new Vector2(50, -25);
         if (isLeft) {
-            coinObject.GetComponent<RectTransform>().localPosition = leftVector;
+            coinObject.GetComponent<RectTransform>().anchoredPosition = leftVector;
             Debug.Log(coinObject.GetComponent<RectTransform>().anchoredPosition);
         } else {
             Debug.Log(isLeft);
-            coinObject.GetComponent<RectTransform>().localPosition = rightVector;
+            coinObject.GetComponent<RectTransform>().anchoredPosition = rightVector;
         }
         coinObject.GetComponent<RectTransform>().ForceUpdateRectTransforms();
         isLeft = !isLeft;
